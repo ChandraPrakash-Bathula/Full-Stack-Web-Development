@@ -5,6 +5,7 @@ body{
 color: white;
 text-align: center;
 text-transform: uppercase;
+margin-top: 40px;
 }
 h2{
     text-transform: uppercase;
@@ -14,9 +15,9 @@ h2{
     text-align: center;
     color: white;
     font-family: 'Libre Baskerville', serif;
-    width: 40%;
-    margin-left: 10%;
-    margin-top: 100px;
+    width: 45%;
+    margin: 10%;
+    margin-top: 80px;
 }
 .meme-img{
     border: 5px solid white;
