@@ -1,1 +1,54 @@
 /* Write your code here: */
+
+/* 
+Combining First case: Grouping
+We can even group different classes, ids and elements. 
+for eg: .class1, .class2 {css code}
+#.class-1, #id-1 {css code}
+.class-1, #id-1, #id-2, h2 {css code}*/
+
+h1, h2{
+    color: blueviolet;
+}
+
+/* Combining Second Case:
+Here we can apply the css to only one level down, direct descendent
+selector > selector {
+    CSS code
+} */ 
+.box > p {
+    color: firebrick;
+}
+/* Combining third Case Descendant = Apply to a descendant of left side.
+selector selector {
+    Css code
+}  */
+.box li {
+    color: blue;
+}
+
+/* On the above case we can even use .list li {color:blue}; Both works */
+
+/* Combining fourth case: Chaining
+selectorselector{
+    CSS code
+}
+Chaining = Apply where all selectors are true. */
+
+li.done{
+    color:seagreen;
+}
+
+/* Combining Case five: Combining the combiners
+ We can select ancestors and specify certain element to give css;
+ selector selectorselector{
+    css code
+ } */
+
+ ul p.done{
+    font-size: 0.5rem;
+ }
+
+ /* We can even do the ul > p.done {
+    font-size:0.5rem;
+ } */
