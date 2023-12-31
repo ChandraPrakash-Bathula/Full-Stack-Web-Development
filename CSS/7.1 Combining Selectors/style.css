@@ -7,24 +7,25 @@ for eg: .class1, .class2 {css code}
 #.class-1, #id-1 {css code}
 .class-1, #id-1, #id-2, h2 {css code}*/
 
-h1, h2{
-    color: blueviolet;
+h1,
+h2 {
+  color: blueviolet;
 }
 
 /* Combining Second Case:
 Here we can apply the css to only one level down, direct descendent
 selector > selector {
     CSS code
-} */ 
+} */
 .box > p {
-    color: firebrick;
+  color: firebrick;
 }
 /* Combining third Case Descendant = Apply to a descendant of left side.
 selector selector {
     Css code
 }  */
 .box li {
-    color: blue;
+  color: blue;
 }
 
 /* On the above case we can even use .list li {color:blue}; Both works */
@@ -35,8 +36,8 @@ selectorselector{
 }
 Chaining = Apply where all selectors are true. */
 
-li.done{
-    color:seagreen;
+li.done {
+  color: seagreen;
 }
 
 /* Combining Case five: Combining the combiners
@@ -45,11 +46,11 @@ li.done{
     css code
  } */
 
- ul p.done{
-    font-size: 0.5rem;
- }
+ul p.done {
+  font-size: 0.5rem;
+}
 
- /* We can even do the ul > p.done {
+/* We can even do the ul > p.done {
     font-size:0.5rem;
  } */
 
