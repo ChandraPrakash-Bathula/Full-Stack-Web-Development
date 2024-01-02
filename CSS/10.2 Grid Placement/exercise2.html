@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Grid Placement</title>
   <style>
     body {
@@ -27,20 +27,33 @@
       display: flex;
       align-items: center;
       justify-content: center;
-
     }
 
     .cowboy {
-      background-color: #00B9FF;
+      background-color: #00b9ff;
       grid-column: span 2;
     }
 
     .astronaut {
-      background-color: #03989E;
-      order: 1;
+      background-color: #03989e;
+      /* 
+        First Way to do this: 
+        Here giving an order value of higher number to the item it will get placed
+        to the rightest (or) the bottom most item.
+        order: 1;
+         grid-column: span 2; */
+
+
+      /*  Second Way: Here we can simply define where the row starts and ends and where the column starts and ends
+      grid-row-start: 2 ;
+         grid-row-end: 3;
+         grid-column-start: 1;
+         grid-column-end: 3; */
+
+         /*Third Way is this grid-area: Which is a short hand for grid row-start and end and grid column start and end. */
+      grid-area: 2 / 1 / 2/ 3;
 
       /* TODO: Make the astronaut box look like the goal2 image. */
-
     }
   </style>
 </head>
