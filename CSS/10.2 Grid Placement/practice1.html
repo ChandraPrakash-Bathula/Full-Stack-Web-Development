@@ -1,49 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Grid Placement</title>
-    <style>
-      body {
-        padding: 0;
-        margin: 0;
-      }
 
-      .container {
-        height: 100vh;
-        display: grid;
-        gap: 3rem;
-        grid-template-columns: 1fr 1fr 1.5fr;
-        grid-template-rows: 1fr 1fr;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grid Placement</title>
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+    }
 
-      .item {
-        font-size: 5rem;
-        color: white;
-        font-family: Arial, Helvetica, sans-serif;
-        background-color: blueviolet;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+    .container {
+      height: 100vh;
+      display: grid;
+      gap: 3rem;
+      grid-template-columns: 1fr 1fr 1.5fr;
+      grid-template-rows: 1fr 1fr;
+    }
 
-      /* grid-column's short hand properties are
+    .item {
+      font-size: 5rem;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: blueviolet;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* grid-column's short hand properties are
       =>for this grid-column : span 2; 
- Here span tells where it meant to start and number tells where it ends;
+      Here span tells where it meant to start and number tells where it ends;
       grid-column-start:2 ;
       grid-column-end:auto; 
       And we even have 
       grid-row: where the row starts and end;
       grid-column: where the column starts and ends*/
-    </style>
-  </head>
+  </style>
+</head>
 
-  <body>
-    <div class="container">
-      <div class="item cowboy">🤠</div>
-      <div class="item astronaut">👨‍🚀</div>
-      <div class="item book">📖</div>
-    </div>
-  </body>
+<body>
+  <div class="container">
+    <div class="item cowboy">🤠</div>
+    <div class="item astronaut">👨‍🚀</div>
+    <div class="item book">📖</div>
+  </div>
+</body>
+
 </html>
