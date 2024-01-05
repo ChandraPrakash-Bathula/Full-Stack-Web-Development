@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Keywords</title>
+  </head>
+  <body>
+    <h2>Keyword Predictions:</h2>
+    {% if data|length > 0 %}
+      <ul>
+        {% for keyword in data %}
+          <li>{{ keyword }}</li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>No keywords found.</p>
+    {% endif %}
+    <li>
+      <a href="/">Home Page</a>
+    </li>
+  </body>
+</html>
