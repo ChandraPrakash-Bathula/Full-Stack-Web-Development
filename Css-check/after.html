@@ -1,21 +1,137 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Keywords</title>
-  </head>
-  <body>
-    <h2>Keyword Predictions:</h2>
-    {% if data|length > 0 %}
+
+<head>
+  <title>Keywords</title>
+</head>
+<style>
+  body {
+    height: 80vh;
+    width: 100%;
+    color: cadetblue;
+    line-height: 1.6;
+  }
+
+  h2 {
+    color: darkolivegreen;
+  }
+
+  li {
+    color: black;
+  }
+
+  .keywords-container {
+    display: flex;
+  }
+
+  .footer {
+    background-color: aquamarine;
+    display: flex;
+    justify-content: space-evenly;
+    font-family: "Poppins", sans-serif;
+    color: cornflowerblue;
+    width: 100%;
+    height: 60px;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .key-container1>li {
+    font-size: larger;
+    font-weight: 400;
+  }
+
+  a {
+    text-decoration: none;
+    color: cadetblue;
+    font-weight: 400;
+    font-size: large;
+  }
+
+  .key-container1 {
+    width: 40%;
+    padding: 5px;
+    background-color: rgb(176, 233, 245);
+  }
+
+  .key-container2 {
+    width: 50%;
+    margin: 10px;
+  }
+</style>
+
+<body>
+  <h2>Keyword Predictions:</h2>
+
+  <a href="/">Home Page</a>
+
+  <div class="keywords-container">
+    <div class="key-container1">
+      {% if data|length > 0 %}
       <ul>
         {% for keyword in data %}
-          <li>{{ keyword }}</li>
+        <h3>These are the Keywords in the paragraph.</h3>
+        <li>{{ keyword }}</li>
         {% endfor %}
       </ul>
-    {% else %}
+      {% else %}
       <p>No keywords found.</p>
-    {% endif %}
-    <li>
-      <a href="/">Home Page</a>
-    </li>
-  </body>
+      {% endif %}
+
+    </div>
+    <div class="key-container2">
+      <h2>Real-World Marvels: Machine Learning in Action</h2>
+      <ol>
+        <li><b>Netflix Movie Recommendations:</b>
+          Consider the magic behind Netflix's personalized recommendations. Machine learning algorithms analyze viewing
+          history, preferences, and user behavior to suggest movies tailored to individual tastes. The platform
+          continuously refines its recommendations, creating a personalized viewing experience.
+        </li>
+        <li><b>Amazon Review Section:</b>
+          The product review section on Amazon is a prime example of sentiment analysis using machine learning.
+          Algorithms
+          analyze customer reviews to categorize sentiments—positive, negative, or neutral—providing valuable insights
+          to
+          both sellers and potential buyers.
+        </li>
+        <li><b>Product Recommendations:</b>
+          Amazon, along with other e-commerce giants, uses machine learning to offer product recommendations. By
+          analyzing
+          user browsing and purchase history, the platform suggests products that align with individual preferences,
+          enhancing the overall shopping experience.
+        </li>
+      </ol>
+      <h3>Implementation Insights: Decoding the Magic</h3>
+      <ul>
+        <li><b>Data Collection:</b>
+          In each case, data is the cornerstone. For Netflix, it's user viewing history; for Amazon, it's customer
+          reviews
+          and purchase data. The quality and relevance of data play a pivotal role in the effectiveness of machine
+          learning models.
+        </li>
+        <li><b>Training and Fine-Tuning:</b>
+          Machine learning models undergo extensive training on historical data to understand patterns and
+          relationships.
+          Fine-tuning is an ongoing process, adapting to changing user preferences and behaviors.
+        </li>
+        <li><b>Deployment:</b>
+          Once trained, models are deployed to production environments, seamlessly integrated into the user interface.
+          The
+          transition from development to deployment requires careful consideration of scalability, efficiency, and user
+          experience.
+        </li>
+      </ul>
+    </div>
+  </div>
+  <footer>
+    <div class="footer">
+      <a href="https://www.linkedin.com/in/chandra-prakash-bathula/">Linkedin</a><a
+        href="https://medium.com/@chandu.bathula16">Medium</a></span><a
+        href="https://github.com/ChandraPrakash-Bathula">Github</a></span>
+      <a href="https://twitter.com/Chanduu1617">Twitter</a>
+    </div>
+  </footer>
+</body>
+
 </html>
