@@ -1,2 +1,0 @@
-Tech Revamp 
-MERN Stack
