@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Styles and Rules</title>
+  </head>
+
+  <body style="background-color: rgb(168, 237, 214)">
+    <header>
+      <h1>There are rules for the specificity and the importance.</h1>
+    </header>
+    <div style="background-color: powderblue">
+      <div style="background-color: lightgrey; padding: 10px">
+        <h2>
+          Let's check the object and value: Position when we have the same style
+        </h2>
+        <p>" .li { color:red; color:blue; }"</p>
+        <span
+          ><i
+            ><b
+              >Color Blue will be applied here; The last term plays the
+              importance when we have same objects in the styling.</b
+            ></i
+          ></span
+        >
+      </div>
+      <div style="background-color: cornflowerblue; padding: 10px">
+        <h2>Coming to the specificity:</h2>
+        <p>
+          " li{color:blue};"
+          <br />
+          " .list-item{color:red};"
+          <br />
+          " li[draggable="true"] {color:purple};" <br />
+          " #item{color:green};"
+        </p>
+        <span
+          ><i
+            ><b
+              >Here color green will be applied importance increases in the
+              downward way.</b
+            ></i
+          ></span
+        >
+      </div>
+      <div style="background-color: darkcyan; padding: 10px">
+        <h2>Types of CSS Styling will also matters here:</h2>
+        <p>
+          " <. li el="stylesheet" href="styles.css" . />"
+          <br />
+          " style tag => internal styles; li { color : blue } <= style tag "
+          <br />
+          " < li color : red> < /li .> : Inline Style"
+        </p>
+        <span
+          ><i
+            ><b
+              >Here the importance is given to inline style then to internal
+              styles and finally to external style sheets.</b
+            ></i
+          ></span
+        >
+      </div>
+    </div>
+    <div style="background-color: bisque; padding: 10px">
+      <h2>!important Keyword and it's importance</h2>
+      <p>".item { color: blue; color:red !important; }"</p>
+      <span
+        ><i
+          ><b
+            >Here color:red will be applied. Applying !importance keyword to a
+            property will make it the most important value to that relative
+            property and element. "!important" keyword even dominatesd the
+            inline styles and acts as the priority.</b
+          ></i
+        ></span
+      >
+    </div>
+  </body>
+</html>
