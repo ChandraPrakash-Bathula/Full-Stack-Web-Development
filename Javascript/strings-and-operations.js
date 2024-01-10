@@ -1,13 +1,14 @@
-var fName = 'Chandra Prakash';
-var lName = 'Bathula';
+var fName = "Chandra Prakash";
+var lName = "Bathula";
 
-console.log(fName + ' ' + lName);
+console.log(fName + " " + lName);
 
 /* Escaping Literal Quotes in Strings: 
  We can use the \ symbol to escape the quote being last character in the javascript: \ symbol here identifies as the quotation marks */
 
-var mystr = "I am a string \" in a string \" Bro!";
-var sentence = "See here the even we have multiple Quotation marks we got the sentence by using this symbol \ ";
+var mystr = 'I am a string " in a string " Bro!';
+var sentence =
+  "See here the even we have multiple Quotation marks we got the sentence by using this symbol  ";
 console.log(sentence + " : " + mystr);
 
 /* Quoting with single quotes: Instead of sing the symbol \ we can also utilize the single quotes here; */
@@ -36,34 +37,34 @@ console.log(seeString);
  \b    backspace
   ****/
 
-var stringg = 'FirstLine\n\t\\secondline\t\\\r';
+var stringg = "FirstLine\n\t\\secondline\t\\\r";
 console.log(stringg);
 
 /* Concatetinating Strings with + operator: */
 
-var myStr = "This is a string " + '. And so is this.';
+var myStr = "This is a string " + ". And so is this.";
 
 console.log(myStr);
 
 /* Concatenating with = operator */
 
-var thisString = "Hey Bro!"
+var thisString = "Hey Bro!";
 
-thisString += ' You are Good.'
+thisString += " You are Good.";
 
 console.log(thisString);
 
 /*Contsructing strings with variables. */
 
 var string1 = "I am Chandu.";
-var string2 = string1 + " What's your name ?"
+var string2 = string1 + " What's your name ?";
 
 console.log(string2);
 
 /* Appending variables to Strings. */
 
-var anAdjective = 'Beautiful.';
-var strin = 'This flower is ';
+var anAdjective = "Beautiful.";
+var strin = "This flower is ";
 strin += anAdjective;
 
 console.log(strin);
@@ -86,5 +87,5 @@ console.log(stringCharacter[5]);
 
 var wrongString = "Jello Javascript";
 // wrongString[0] = 'H' ; This is not possible
-wrongString= 'Hello Javascript'
+wrongString = "Hello Javascript";
 console.log(wrongString);
