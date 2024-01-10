@@ -7,7 +7,6 @@ console.log("Hello World from Javascript");
 
 var number = 5; // This is an inline comment;
 
-
 /* This is a 
 
 Multi-line 

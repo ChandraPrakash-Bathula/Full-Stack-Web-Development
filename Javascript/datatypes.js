@@ -16,17 +16,17 @@ console.log(cric);
 
 /* String in Javascript is a any sort of text enclosed in Quotation Marks
  be it single '' or Double "" */
- 
- String = "string";
- console.log(String);
- 
+
+String = "string";
+console.log(String);
+
 //  Numbers are numbers
 var aa = 5;
-console.log(typeof(aa));
+console.log(typeof aa);
 
 //Object can store the values in key-value pairs:
 
 var at = {
-    k:'king'
-}
-console.log(at['k']) 
+  k: "king",
+};
+console.log(at["k"]);
