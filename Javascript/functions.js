@@ -1,7 +1,9 @@
 /* Reusable Code with Functions(): */
 
 function thisFunct() {
-    //In this we will have the function keyword first then the name we need to give and paranthesis () and curly braces in which the logic happens and finally calling the function at the end.
+
+/* In this we will have the function keyword first then the name we need to give and paranthesis () and
+ curly braces in which the logic happens and finally calling the function at the end.*/
     console.log('Bro working !');
 }
 thisFunct();
@@ -12,6 +14,7 @@ function myfunction(){
 myfunction();
 
 /* Passing values to the functions with arguements: 
+
 Parameters are the variables acts as the placeholders for the values that are to be input to a function, when it is called. */
 
 function mathFunct(a,b){ 
