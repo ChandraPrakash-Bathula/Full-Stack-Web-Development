@@ -26,10 +26,12 @@ function functWithMultiple(a,b,c){
 functWithMultiple(12,24,63);
 
 /* Global Scope and Functions: 
+
 Scope refers to teh visibility of the variables. 
 Variables which are define outside the function block has global scope 
 and that variables that are defined inside the function are in the parameters block has a 
 local scope.
+
 Global scope means we can see them everywhere but the local has visibility in that particular function. */
 
 var myglobal = 12;
