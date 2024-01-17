@@ -70,3 +70,76 @@ delete delObj.habits;
 console.log(delObj);
 
 /* Using Objects for Lookups: */
+
+function phoneticLookup(val) {
+  var result = "";
+  var lookup = {
+    alpha: "Adams",
+    bravo: "Boston",
+    charlie: "Chicago",
+    delta: "Delta",
+    echo: "Easy",
+    foxtrot: "Frank",
+  };
+  result = lookup[val];
+  return result;
+  /* switch (val) {
+        case 'alpha':
+            result = 'Adams';
+            break;
+        case 'bravo':
+            result = 'Boston';
+            break;
+        case 'charlie':
+            result = 'Chicago';
+            break;
+        case 'delta':
+            result = 'Denver';
+            break;
+        case 'echo':
+            result = 'Easy';
+            break;
+        case 'foxtrot':
+            result = 'Frank';
+            break;
+    } */
+}
+console.log(phoneticLookup("charlie"));
+
+/* Testing Objects for Properties : hasOwnProperty */
+
+var myObj = {
+  gift: "pony",
+  pet: "kitten",
+  bed: "sleigh",
+};
+
+function checkObj(checkProp) {
+  if (myObj.hasOwnProperty(checkProp)) {
+    return myObj[checkProp];
+  } else {
+    return "Not Found";
+  }
+}
+
+console.log(checkObj("gift"));
+
+/* Manipulating Complex Objects: */
+
+var myMusic = [
+  {
+    artist: "Justin Beiber",
+    title: "Pop Singer",
+    year: 2008,
+    formats: ["DVD", "CD", "LP", "8T"],
+    gold: true,
+  },
+  {
+    artist: "Taylor Swift",
+    title: "Singer",
+    release_year: 2007,
+    formats: ["Youtube Video"],
+  },
+];
+
+console.log(myMusic[1]["release_year"]);
