@@ -115,8 +115,41 @@ console.log(myRandom);
 
 /* Use the parseInt Function: This converts strings to integers. */
 
-function convertToInteger(str){
+function convertToInteger(str) {
     return parseInt(str);
 }
 
 console.log(convertToInteger('123'));
+
+/* Use the parseInt Function with a Radix: Radix specifies the base of the number in the string. */
+
+function convertToInteg(num) {
+    return parseInt(num, 2)
+}
+console.log(convertToInteg('10011')); //Now the computer knows it as a binary number.
+
+/* Use the Conditional (Terinary) Operator: This is like a one-line if-else operator.
+
+Condition ? statement-if-true : statement-if-false; */
+function checkIfEqual(a, b) {
+    if (a == b) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+console.log(checkIfEqual(2, '2'));
+
+// Above one can also be written as:
+function checkEqual(a, b) {
+    return a === b ? true : false
+}
+console.log(checkEqual(3, 3.0));
+
+/* Multiple Conditional Operators:
+condition 1 ? Return Statement : condition 2 : Return statement : Else Condition. */
+function checkingSign(integer) {
+    return integer > 0 ? 'Positive' : integer < 0 ? 'Negative' : 'Zero Bro'
+}
+console.log(checkingSign(1));
