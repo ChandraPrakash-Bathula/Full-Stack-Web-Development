@@ -160,3 +160,13 @@ function checkingBigger(number) {
   return number > 3 ? "Bigger than 3" : number < 3 ? "Smaller than 3" : "";
 }
 console.log(checkingBigger(8));
+
+const variables = (a, b) => {
+  if (a > b) {
+    return "a is greater than b";
+  } else {
+    return "b is greater than a";
+  }
+};
+const result = variables(8, 9);
+console.log(result);
