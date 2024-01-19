@@ -153,3 +153,8 @@ function checkingSign(integer) {
     return integer > 0 ? 'Positive' : integer < 0 ? 'Negative' : 'Zero Bro'
 }
 console.log(checkingSign(1));
+
+function checkingBigger(number){
+return number > 3 ? 'Bigger than 3' : number < 3 ? 'Smaller than 3' :'';
+}
+console.log(checkingBigger(8));
