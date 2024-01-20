@@ -181,3 +181,14 @@ var arrowFunction = (a, b, c) => {
 const returnResult = arrowFunction(3, 4, 6);
 
 console.log(returnResult);
+
+var arrowsFunction = (a, b, c) => {
+    return a > b && a > c
+      ? "a is the Big one here"
+      : b > a && b > c
+      ? "b is the big one here"
+      : "Only c is big here",alert('Why Bro!');
+  };
+  const returningResult = arrowsFunction(33, 45, 63);
+  
+  console.log(returningResult);  
