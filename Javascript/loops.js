@@ -171,9 +171,13 @@ const variables = (a, b) => {
 const result = variables(8, 9);
 console.log(result);
 
-var arrowFunction = (a,b,c) =>{
-return a  > b && a>c ? 'a is the Big one here' : b > a && b >c ? 'b is the big one here' : 'Only c is big here'
-}
-const returnResult = arrowFunction(3,4,6);
+var arrowFunction = (a, b, c) => {
+  return a > b && a > c
+    ? "a is the Big one here"
+    : b > a && b > c
+    ? "b is the big one here"
+    : "Only c is big here";
+};
+const returnResult = arrowFunction(3, 4, 6);
 
 console.log(returnResult);
