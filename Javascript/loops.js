@@ -183,17 +183,26 @@ const returnResult = arrowFunction(3, 4, 6);
 console.log(returnResult);
 
 var arrowOnlyFunction = (a, b, c) => {
-    return a > b && a > c
+  return (
+    a > b && a > c
       ? "a is the Big one here"
       : b > a && b > c
       ? "b is the big one here"
-      : "Only c is big here",alert('Why Bro!');
-  };
-  const returningResult = arrowOnlyFunction(33, 45, 63);
-  
-  console.log(returningResult);  
+      : "Only c is big here",
+    alert("Why Bro!")
+  );
+};
+const returningResult = arrowOnlyFunction(33, 45, 63);
 
-  function anythingBro(a,b,c,d){
-return a > b && c > d ? "a and c are big than b and d" : a > c && b > d ? 'a and b are big than c and d' : b > c && d >a?'b and d are big than c and a':'Not all the remaining cases.'
-  }
-  console.log(anythingBro(112,234,5,667));
+console.log(returningResult);
+
+function anythingBro(a, b, c, d) {
+  return a > b && c > d
+    ? "a and c are big than b and d"
+    : a > c && b > d
+    ? "a and b are big than c and d"
+    : b > c && d > a
+    ? "b and d are big than c and a"
+    : "Not all the remaining cases.";
+}
+console.log(anythingBro(112, 234, 5, 667));
