@@ -206,3 +206,15 @@ function anythingBro(a, b, c, d) {
     : "Not all the remaining cases.";
 }
 console.log(anythingBro(112, 234, 5, 667));
+
+
+function anythingBro(a, b, c, d) {
+  return a > b && c > d
+    ? "a and c are big than b and d"
+    : a > c && b > d
+    ? "a and b are big than c and d"
+    : b > c && d > a
+    ? "b and d are big than c and a"
+    : "Not all the remaining cases.";
+}
+console.log(anythingBro(102, 204, 504, 18));
