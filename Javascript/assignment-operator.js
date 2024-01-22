@@ -4,7 +4,7 @@ var a = 9;
 /* Initializing the variables using assignment operator. 
 Here the value is undefined yet */
 
-var A;
+var a;
 var B;
 var C;
 
