@@ -91,3 +91,4 @@ We just need to use the % symbol. */
 
 var remainder = 10 % 3;
 console.log(remainder);
+console.log(alert(remainder));
