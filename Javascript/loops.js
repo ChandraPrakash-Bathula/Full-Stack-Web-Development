@@ -206,3 +206,19 @@ function anythingBro(a, b, c, d) {
     : "Not all the remaining cases.";
 }
 console.log(anythingBro(112, 234, 5, 667));
+
+/* Difference between var and let keywords: 
+We can declare the same variable twice with var keyword but we cannot do it with let keyword. If we declare it to let it will give us duplicate declaration error. Because it says we can't create the same variable in the same scope. In order to have the let keyword and the same variable name to not get an error.*/
+let dogName = "Snoopy";
+var quotation;
+dogName = "Tweety"; //here the last variable will be considered as the variable value.
+
+function dogTalk() {
+  "use strict";
+  dogName = "Tweety";
+  return (quotation = dogName + " Says Bow Bow!");
+}
+alert(dogTalk());
+console.log(dogTalk());
+
+/* Using strict will enable strict mode which capture conding errors and unsafe actions. Actions like creating variables and not declaring this can be used in top of the javascript file or else in the functions.*/
