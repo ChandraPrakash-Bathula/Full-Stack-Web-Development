@@ -237,50 +237,78 @@ console.log(dogTalk());
 /* Var variable when created it's scope is global and local if defined in a function. When it comes to let keyword, However,let- the scope is limited to the block or statement that it was declared in.*/
 
 function scopeViewing() {
-    'use strict';
-    var i = 'function scope';
-    if (true) {
-        i = 'block scope';
-        console.log('block scope i is: ', i);
-    }
-    console.log('function scope i is: ', i);
-    return i;
+  "use strict";
+  var i = "function scope";
+  if (true) {
+    i = "block scope";
+    console.log("block scope i is: ", i);
+  }
+  console.log("function scope i is: ", i);
+  return i;
 }
 console.log(scopeViewing());
 
 function scopeView() {
-    'use strict';
-    let i = 'function scope';
-    /* if let keyword is declared and accessed in another block it throws an error. */
-    if (true) {
-        let i = 'block scope';
-        console.log('block scope i is: ', i);
-    }
-    console.log('function scope i is: ', i);
-    return i;
+  "use strict";
+  let i = "function scope";
+  /* if let keyword is declared and accessed in another block it throws an error. */
+  if (true) {
+    let i = "block scope";
+    console.log("block scope i is: ", i);
+  }
+  console.log("function scope i is: ", i);
+  return i;
 }
 console.log(scopeView());
 
 /* Declaring a Read-Only Variable with the const keyword. It has all the features of let but it is read only. Const is another way to declare a variable. */
 
-function printManyTimes(str){
-    'use strict';
-    
-    var sentence = str + ' is cool!';
-    sentence = str + ' is amazing.';
-    for(var i = 0;i<str.length;i++){
-        console.log(sentence);
-    }
-}
-console.log(printManyTimes('Me completing JS fast'));
+function printManyTimes(str) {
+  "use strict";
 
-function printsomeTimes(str){
-    'use strict';
-    
-    const sentence = str + ' is cool!';
-    sentence = str + ' is amazing.'; //It will throw an error : 'Assignment to constant variable.'
-    for(var i = 0;i<str.length;i++){
-        console.log(sentence);
-    }
+  var sentence = str + " is cool!";
+  sentence = str + " is amazing.";
+  for (var i = 0; i < str.length; i++) {
+    console.log(sentence);
+  }
 }
-console.log(printsomeTimes('Me completing JS fast'));
+console.log(printManyTimes("Me completing JS fast"));
+
+function printsomeTimes(str) {
+  "use strict";
+
+  const sentence = str + " is cool!";
+  sentence = str + " is amazing."; //It will throw an error : 'Assignment to constant variable.'
+  for (var i = 0; i < str.length; i++) {
+    console.log(sentence);
+  }
+}
+console.log(printsomeTimes("Me completing JS fast"));
+
+function printsomeTimes(str) {
+  "use strict";
+
+  const SENTENCE = str + " is cool!";
+  for (let i = 0; i < str.length; i += 2) {
+    console.log(SENTENCE);
+  }
+}
+console.log(printsomeTimes("If completing JS fast"));
+
+/* Declaring with const you cannot reassign it afterwards. If we are about to use const we need to have all of them un capital letters. */
+
+const VARIABLE = "any variable";
+console.log(VARIABLE);
+
+/* Mutating an array declared with const: We cannot reassign the variable but we can mutate the array.*/
+
+const s = [5, 7, 2];
+function editPlace() {
+  "use strict";
+  //s = [2,5,7] rearranging is not possible.
+  s[0] = 2;
+  s[1] = 5;
+  s[2] = 7;
+}
+editPlace();
+console.log(s);
