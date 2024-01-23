@@ -312,3 +312,54 @@ function editPlace() {
 }
 editPlace();
 console.log(s);
+
+/* Preventing Object Mutation: using obj.freeze */
+
+function someObj() {
+  "use strict";
+  const MATH_CONSTANTS = {
+    PI: 3.14,
+  };
+  try {
+    MATH_CONSTANTS.PI = 99;
+  } catch (ex) {
+    console.log(ex);
+  }
+  return MATH_CONSTANTS.PI;
+}
+const PI = someObj();
+console.log(PI);
+/* So, whenever we have an object and we don't want to any of the items in the object to change we need to use Object.frreze() method. */
+function anyObj() {
+  "use strict";
+  const MATH_CONSTANT = {
+    PIE: 3.145,
+  };
+  Object.freeze(MATH_CONSTANT);
+  try {
+    MATH_CONSTANT.PIE = 99;
+  } catch (ex) {
+    console.log(ex);
+  }
+  return MATH_CONSTANT.PI;
+}
+const PIE = anyObj();
+console.log(PIE);
+
+/* Using Arrow Functions to wrote concise Anonymous functions. */
+
+var magic = function () {
+  /* This is an anonymous function. And it doesnot have any name and will be added to the variable directly. And we can convert this into an arrow function. */
+  return new Date();
+};
+console.log(magic());
+
+var arrowFunctionBro = () => {
+  return new Date();
+};
+console.log(arrowFunctionBro());
+
+/* And we can further concise this into like this. */
+
+var keyfunction = () => new Date();
+console.log(keyfunction());
