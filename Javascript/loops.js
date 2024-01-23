@@ -376,3 +376,43 @@ console.log(myPet([1, 2], [3, 4, 5]));
 
 const myArrowFunction = (array1, array2) => array1.concat(array2);
 console.log(myArrowFunction([1, 2, 3], [3, 4, 5]));
+/* Higher Order Array Functions: Map, filter and reduce.
+isInteger() function checks if the number is integer. */
+
+const realNumberArray = [3, 5.4, 6, -9.87, 45, 54, 7.2, -2];
+const squareList = (arr) => {
+    const squaredIntegers = arr.filter(num => Number.isInteger(num) && num > 0).map(x => x * x);
+    return squaredIntegers;
+};
+
+const squaredIntegers = squareList(realNumberArray);
+console.log(squaredIntegers);
+
+/*Some more higher Order functions.*/
+
+const increment = (function () {
+    return function increment(number, value = 1) {
+        return number + value;
+    };
+})();
+console.log(increment(5, 2));
+console.log(increment(5));
+
+/* Use the Rest Operator with Function Parameters.The rest operator allows you to create a function that takes a variable number of arguments. */
+
+const sum = (function () {
+    return function sum(x, y, z) {
+        const args = [x, y, z];
+        return args.reduce((a, b) => a + b, 0);
+    };
+})();
+console.log(sum(1, 2, 3));
+
+const summing = (function () {
+    return function summing(...args) {
+        return args.reduce((a, b) => a + b, 0);
+    };
+})();
+console.log(summing(1, 2, 3,4));
+
+/*Use the spread operator to evaluate arrays in-place.*/
