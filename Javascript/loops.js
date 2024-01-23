@@ -207,6 +207,17 @@ function anythingBro(a, b, c, d) {
 }
 console.log(anythingBro(112, 234, 5, 667));
 
+function anythingBro(a, b, c, d) {
+  return a > b && c > d
+    ? "a and c are big than b and d"
+    : a > c && b > d
+    ? "a and b are big than c and d"
+    : b > c && d > a
+    ? "b and d are big than c and a"
+    : "Not all the remaining cases.";
+}
+console.log(anythingBro(102, 204, 504, 18));
+
 /* Difference between var and let keywords: 
 We can declare the same variable twice with var keyword but we cannot do it with let keyword. If we declare it to let it will give us duplicate declaration error. Because it says we can't create the same variable in the same scope. In order to have the let keyword and the same variable name to not get an error.*/
 let dogName = "Snoopy";
