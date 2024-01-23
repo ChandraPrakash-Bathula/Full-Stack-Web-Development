@@ -363,3 +363,16 @@ console.log(arrowFunctionBro());
 
 var keyfunction = () => new Date();
 console.log(keyfunction());
+
+const anyFunction = () => new Date();
+console.log(anyFunction());
+
+/* Write arrow functions with parameters: */
+
+var myPet = function (array1, array2) {
+  return array1.concat(array2);
+};
+console.log(myPet([1, 2], [3, 4, 5]));
+
+const myArrowFunction = (array1, array2) => array1.concat(array2);
+console.log(myArrowFunction([1, 2, 3], [3, 4, 5]));
