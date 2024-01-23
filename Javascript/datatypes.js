@@ -30,3 +30,4 @@ var at = {
   k: "king",
 };
 console.log(at["k"]);
+console.log(alert(at['k']));

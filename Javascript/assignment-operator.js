@@ -4,7 +4,7 @@ var a = 9;
 /* Initializing the variables using assignment operator. 
 Here the value is undefined yet */
 
-var A;
+var a;
 var B;
 var C;
 
@@ -91,3 +91,4 @@ We just need to use the % symbol. */
 
 var remainder = 10 % 3;
 console.log(remainder);
+console.log(alert(remainder));

@@ -214,3 +214,4 @@ function compareStrictInequal(vaalu) {
   return "Equal Bro!";
 }
 console.log(compareStrictInequal("10"));
+console.log(compareStrictInequal("100"));
