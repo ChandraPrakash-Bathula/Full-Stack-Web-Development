@@ -233,3 +233,54 @@ alert(dogTalk());
 console.log(dogTalk());
 
 /* Using strict will enable strict mode which capture conding errors and unsafe actions. Actions like creating variables and not declaring this can be used in top of the javascript file or else in the functions.*/
+
+/* Var variable when created it's scope is global and local if defined in a function. When it comes to let keyword, However,let- the scope is limited to the block or statement that it was declared in.*/
+
+function scopeViewing() {
+    'use strict';
+    var i = 'function scope';
+    if (true) {
+        i = 'block scope';
+        console.log('block scope i is: ', i);
+    }
+    console.log('function scope i is: ', i);
+    return i;
+}
+console.log(scopeViewing());
+
+function scopeView() {
+    'use strict';
+    let i = 'function scope';
+    /* if let keyword is declared and accessed in another block it throws an error. */
+    if (true) {
+        let i = 'block scope';
+        console.log('block scope i is: ', i);
+    }
+    console.log('function scope i is: ', i);
+    return i;
+}
+console.log(scopeView());
+
+/* Declaring a Read-Only Variable with the const keyword. It has all the features of let but it is read only. Const is another way to declare a variable. */
+
+function printManyTimes(str){
+    'use strict';
+    
+    var sentence = str + ' is cool!';
+    sentence = str + ' is amazing.';
+    for(var i = 0;i<str.length;i++){
+        console.log(sentence);
+    }
+}
+console.log(printManyTimes('Me completing JS fast'));
+
+function printsomeTimes(str){
+    'use strict';
+    
+    const sentence = str + ' is cool!';
+    sentence = str + ' is amazing.'; //It will throw an error : 'Assignment to constant variable.'
+    for(var i = 0;i<str.length;i++){
+        console.log(sentence);
+    }
+}
+console.log(printsomeTimes('Me completing JS fast'));
