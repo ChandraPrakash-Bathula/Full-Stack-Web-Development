@@ -416,3 +416,54 @@ const summing = (function () {
 console.log(summing(1, 2, 3,4));
 
 /*Use the spread operator to evaluate arrays in-place.*/
+
+const arr1 = ['JAN', 'FEB', 'MAR', 'APR', 'MAY'];
+let arr2;
+(function () {
+    arr2 = arr1;
+    arr1[0] = 'potato';
+})();
+console.log(arr2);
+
+/* But if we use spread operator we can only have the contents equal to the array. */
+
+const arrayy1 = ['JAN', 'FEB', 'MAR', 'APR', 'MAY'];
+let arrayy2;
+(function () {
+    arrayy2 = [...arrayy1];
+    arrayy1[0] = 'MANGO';
+})();
+console.log(arrayy2);
+
+/* Use Destrcturing Assignment to Assign Variables from Objects. */
+
+var voxel = { x: 3.8, y: 7.2, z: 8.1 };
+var x = voxel.x;
+var y = voxel.y;
+var z = voxel.z;
+
+const { x: a, y: b, z: c } = voxel;
+console.log(voxel);
+
+const AVG_TEMP = {
+    today: 77.5,
+    tomorrow: 72
+};
+
+function getTempOfTmrw(avgTemperatures) {
+    "use strict";
+    const { tomorrow: tempOfTomorrow } = avgTemperatures;
+    return tempOfTomorrow;
+}
+console.log(getTempOfTmrw(AVG_TEMP));
+
+const any_number = {
+    1: 'One',
+    2: 'Second'
+};
+
+function practicingBro(someNumber) {
+    const { 1: firstNumber } = someNumber;
+    return firstNumber;
+}
+console.log(practicingBro(any_number));
