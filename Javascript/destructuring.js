@@ -44,31 +44,31 @@ console.log(source);
 /* Use Destructuring Assignment to Pass an Object as a Function's Parameters. We can use destructuring assignment to pass an object as a function's parameter. */
 
 const stats = {
-    max: 54.18,
-    std:4.5,
-    median:27,
-    min:-0.72,
-    avg:45
+  max: 54.18,
+  std: 4.5,
+  median: 27,
+  min: -0.72,
+  avg: 45,
 };
-const half = (function(){
-    return function half(stats){
-        return (stats.max + stats.min)/2.0;
-    };
+const half = (function () {
+  return function half(stats) {
+    return (stats.max + stats.min) / 2.0;
+  };
 })();
 console.log(stats);
 console.log(half(stats));
 
 const statis = {
-    max: 54.18,
-    std:4.5,
-    median:27,
-    min:-0.72,
-    avg:45
+  max: 54.18,
+  std: 4.5,
+  median: 27,
+  min: -0.72,
+  avg: 45,
 };
-const halfes = (function(){
-    return function halfes(statis){
-        return (statis.max + statis.min)/1.8;
-    };
+const halfes = (function () {
+  return function halfes(statis) {
+    return (statis.max + statis.min) / 1.8;
+  };
 })();
 console.log(statis);
 console.log(halfes(statis));
