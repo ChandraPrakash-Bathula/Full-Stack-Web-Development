@@ -57,3 +57,18 @@ const half = (function(){
 })();
 console.log(stats);
 console.log(half(stats));
+
+const statis = {
+    max: 54.18,
+    std:4.5,
+    median:27,
+    min:-0.72,
+    avg:45
+};
+const halfes = (function(){
+    return function halfes(statis){
+        return (statis.max + statis.min)/1.8;
+    };
+})();
+console.log(statis);
+console.log(halfes(statis));
