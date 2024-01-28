@@ -1,3 +1,3 @@
 # FullStack Web Development 
 
-Practicing and starting Again MERN Stack: HTML, CSS, Javascript, React.JS, Node.Js, Mongoose and MongoDB.
+This repository contains everything in MERN STACK which starts from HTML, CSS, JavaScript, MongoDB, Express.JS, React.Js and Node.JS in each folder.
