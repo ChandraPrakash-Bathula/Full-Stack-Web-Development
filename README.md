@@ -24,10 +24,4 @@ We welcome contributions from the community to help improve and expand this repo
 
 If you'd like to contribute, please fork this repository, make your changes, and submit a pull request. We'll review your contributions and merge them into the main branch if they align with the goals of this repository.
 
-## License
-
-This repository is licensed under the [MIT License](LICENSE), which means you are free to use, modify, and distribute the contents of this repository for any purpose, provided you include the original copyright and license notice.
-
----
-
 Thank you for visiting our FullStack Web Development repository. We hope you find it valuable in your journey to mastering web development with the MERN stack and beyond. Happy coding! 🚀
