@@ -2,7 +2,7 @@
 
 Welcome to the FullStack Web Development repository! This repository is dedicated to providing comprehensive resources and examples covering the MERN (MongoDB, Express.js, React.js, Node.js) stack, along with fundamental web development technologies such as HTML, CSS, and JavaScript.
 
-## Contents :
+## Repository Contents :
 
 This repository contains folders dedicated to each component of the MERN stack, as well as fundamental web development technologies:
 
