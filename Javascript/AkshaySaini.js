@@ -22,9 +22,27 @@ function b() {
 }
 
 var aa = 10;
-function bb(){
-    var X = 11;
-};
+function bb() {
+  var X = 11;
+}
 console.log(window.aa);
 console.log(aa);
 console.log(this.aa);
+
+var any;
+console.log(any);
+
+if (any === undefined) {
+  console.log("any is undefined");
+} else {
+   console.log("any is not undefined");
+}
+/* JavaScript is a loosely typed language and is not attached to any data type while assigning and manipulating. And is so flexible. */
+var something;
+console.log(something);
+
+something = 10;
+console.log(something);
+
+something = "something";
+console.log(something);
