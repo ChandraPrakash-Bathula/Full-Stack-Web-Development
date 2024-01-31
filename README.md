@@ -1,4 +1,4 @@
-### FullStack Web Development Mastery Repository
+# FullStack Web Development Mastery Repository
 
 Welcome to the FullStack Web Development Mastery repository, your ultimate resource hub for mastering the MERN (MongoDB, Express.js, React.js, Node.js) stack, enriched with fundamental web technologies like HTML, CSS, and JavaScript. Here, you'll discover a treasure trove of resources and practical examples designed to elevate your web development skills.
 
