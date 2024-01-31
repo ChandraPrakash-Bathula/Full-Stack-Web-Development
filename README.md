@@ -14,7 +14,7 @@ This repository contains folders dedicated to each component of the MERN stack, 
 - **React.js**: Provides resources and examples for React.js, a JavaScript library for building user interfaces, often used for creating interactive single-page applications.
 - **Node.js**: Contains resources and examples for Node.js, a JavaScript runtime environment used for server-side development.
 
-## About
+## About :
 
 This repository aims to serve as a comprehensive learning and reference resource for individuals interested in FullStack Web Development, particularly focusing on the MERN stack. Whether you're a beginner or an experienced developer, you'll find a wealth of information and examples to help you build robust and dynamic web applications.
 
