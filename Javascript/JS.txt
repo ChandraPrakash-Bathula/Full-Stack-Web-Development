@@ -4,6 +4,8 @@ Is Javascript synchronous or Asynchronous?
 
 Is Javascript Single Threaded or is it Multi-threaded?
 
+Answer : Javascript is a synchronous single threaded, interpreted language. This means it handles one line at a time for execution and in a synchronous pattern.
+
 First Core Fundamental of Javascript:
 
 "Everything in Javascript happens inside an execution context."
@@ -16,4 +18,3 @@ Execution Context is a big box and has two components in it.
 
 2. The Second COmponent is known as Code Component and is known as Thread Of Execution.
 
-Javascript is a synchronous single threaded, interpreted language.
