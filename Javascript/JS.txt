@@ -7,8 +7,13 @@ Is Javascript Single Threaded or is it Multi-threaded?
 First Core Fundamental of Javascript:
 
 "Everything in Javascript happens inside an execution context."
--> We can assume this execution context to be a big box or a container in which whole javascript is executed.
+
+=> We can assume this execution context to be a big box or a container in which whole javascript is executed.
 
 Execution Context is a big box and has two components in it.
- The first component is also known as the memory component.
- The Second COmponent is known as Code Component and is known as Thread Of Execution.
+
+1. The first component is also known as the memory component.
+
+2. The Second COmponent is known as Code Component and is known as Thread Of Execution.
+
+Javascript is a synchronous single threaded, interpreted language.
