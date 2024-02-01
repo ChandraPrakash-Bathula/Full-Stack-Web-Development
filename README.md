@@ -19,5 +19,4 @@ This repository is more than just a collection of resources—it's a comprehensi
 
 Your insights and expertise can help enrich this repository! We invite contributions that range from typo corrections to the addition of new examples or best practices. To contribute, simply fork this repository, make your enhancements, and submit a pull request. We appreciate every contribution and eagerly await to integrate valuable additions that align with our mission.
 
-
 Thank you for choosing our FullStack Web Development Mastery repository. We're excited to accompany you on your journey to mastering web development with the MERN stack and beyond. Here's to coding excellence! 🚀
