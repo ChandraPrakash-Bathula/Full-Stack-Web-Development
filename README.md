@@ -1,4 +1,4 @@
-# Full Stack Web Development (MERN Stack) Mastery Repository :
+# Full Stack Web Development Mastery Repository :(MERN Stack)
 
 Welcome to the FullStack Web Development Mastery repository !!!
 
