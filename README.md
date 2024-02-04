@@ -4,7 +4,7 @@ Welcome to the FullStack Web Development Mastery repository !!!
 
 Your ultimate resource hub for mastering the MERN (MongoDB, Express.js, React.js, Node.js) stack, enriched with fundamental web technologies like HTML, CSS, and JavaScript. Here, you'll discover a treasure trove of resources and practical examples designed to elevate your web development skills.
 
-## Repository Highlights
+## Repository Highlights :
 
 - **HTML**: Dive into the world of HTML with our extensive range of examples and resources, essential for structuring sophisticated web pages.
 - **CSS**: Explore the art of styling with CSS, featuring examples and resources to craft visually stunning HTML elements and layouts.
@@ -14,11 +14,11 @@ Your ultimate resource hub for mastering the MERN (MongoDB, Express.js, React.js
 - **React.js**: Engage with React.js resources, a pivotal JavaScript library for constructing intuitive and interactive user interfaces.
 - **Node.js**: Explore the versatility of Node.js with our resources and examples, indispensable for robust server-side development.
 
-## About
+## About :
 
 This repository is more than just a collection of resources—it's a comprehensive guide for those passionate about FullStack Web Development, with a special focus on the MERN stack. Catering to both beginners and seasoned developers, we provide an array of informative content and practical examples to help you build dynamic and resilient web applications.
 
-## Contributing to Our Community
+## Contributing to Our Community :
 
 Your insights and expertise can help enrich this repository! We invite contributions that range from typo corrections to the addition of new examples or best practices. To contribute, simply fork this repository, make your enhancements, and submit a pull request. We appreciate every contribution and eagerly await to integrate valuable additions that align with our mission.
 
