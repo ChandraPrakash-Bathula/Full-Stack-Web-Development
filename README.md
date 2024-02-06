@@ -12,7 +12,7 @@ Your ultimate resource hub for mastering the MERN (MongoDB, Express.js, React.js
 - **JavaScript** (ES6): Unleash the power of JavaScript through our comprehensive resources, perfect for adding dynamic interactivity to web pages.
 - **MongoDB** : Delve into MongoDB resources, a cornerstone NoSQL database for high-performance MERN stack applications.
 - **Express.js** : Navigate the realm of Express.js, a vital framework for Node.js, through our curated examples, ideal for crafting efficient APIs and web servers.
-- **React.js** : Engage with React.js resources, a pivotal JavaScript library for constructing intuitive and interactive user interfaces.
+- **React.Js** : Engage with React.js resources, a pivotal JavaScript library for constructing intuitive and interactive user interfaces.
 - **Node.Js** : Explore the versatility of Node.js with our resources and examples, indispensable for robust server-side development.
 
 ## About :
