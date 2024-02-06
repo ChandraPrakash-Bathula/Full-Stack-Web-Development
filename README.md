@@ -7,7 +7,7 @@ Your ultimate resource hub for mastering the MERN (MongoDB, Express.js, React.js
 
 ## Repository Highlights :
 
-- **HTML5**: Dive into the world of HTML with our extensive range of examples and resources, essential for structuring sophisticated web pages.
+- **HTML5** : Dive into the world of HTML with our extensive range of examples and resources, essential for structuring sophisticated web pages.
 - **CSS3**: Explore the art of styling with CSS, featuring examples and resources to craft visually stunning HTML elements and layouts.
 - **JavaScript**: Unleash the power of JavaScript through our comprehensive resources, perfect for adding dynamic interactivity to web pages.
 - **MongoDB**: Delve into MongoDB resources, a cornerstone NoSQL database for high-performance MERN stack applications.
