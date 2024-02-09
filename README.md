@@ -15,7 +15,7 @@ Your ultimate resource hub for mastering the MERN (MongoDB, Express.js, React.js
 - **React.JS** : Engage with React.js resources, a pivotal JavaScript library for constructing intuitive and interactive user interfaces.
 - **Node.JS** : Explore the versatility of Node.js with our resources and examples, indispensable for robust server-side development.
 
-## About
+## About :
 
 This repository is more than just a collection of resources—it's a comprehensive guide for those passionate about FullStack Web Development, with a special focus on the MERN stack. Catering to both beginners and seasoned developers, we provide an array of informative content and practical examples to help you build dynamic and resilient web applications.
 
