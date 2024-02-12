@@ -49,3 +49,11 @@ for(let i = 1; i <= 15; i++) {
 /* Flattening an Array : */
 const flatten = arr => arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatten(val) : val), []);
 console.log(flatten([1, [2, [3, [4]], 5]])); // [1, 2, 3, 4, 5]
+
+/* Checking for Anargams : */
+const areAnagrams = (str1, str2) => {
+    const normalize = str =>
+      str.toLowerCase().replace(/[^a-z\d]/g, '').split('').sort().join('');
+    return normalize(str1) === normalize(str2);
+  };
+  console.log(areAnagrams("listen", "silent")); // true
