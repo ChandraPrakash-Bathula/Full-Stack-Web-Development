@@ -19,3 +19,8 @@ console.log(removeDuplicates([1, 2, 2, 3])); // [1, 2, 3]
 
 const max = arr => Math.max(...arr);
 console.log(max([1, 2, 3, 4])); // 4
+
+/* Reverse a String : */
+
+const reverseString = str => str.split('').reverse().join('');
+console.log(reverseString("hello")); // "olleh"
