@@ -9,3 +9,8 @@ console.log(a, b); // Outputs: 2, 1
 const isEven = num => num % 2 === 0;
 console.log(isEven(4)); // true
 console.log(isEven(3)); // false
+
+/* Removing Duplicates from an Array: */
+
+const removeDuplicates = arr => [...new Set(arr)];
+console.log(removeDuplicates([1, 2, 2, 3])); // [1, 2, 3]
