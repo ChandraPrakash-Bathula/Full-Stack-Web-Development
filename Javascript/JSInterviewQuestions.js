@@ -24,3 +24,13 @@ console.log(max([1, 2, 3, 4])); // 4
 
 const reverseString = str => str.split('').reverse().join('');
 console.log(reverseString("hello")); // "olleh"
+
+/* Checking if a String is a Palindrome */
+
+const isPalindrome = str => {
+    str = str.replace(/\W/g, '').toLowerCase();
+    return str === str.split('').reverse().join('');
+  }
+  console.log(isPalindrome("madam")); // true
+  console.log(isPalindrome("hello")); // false
+  
