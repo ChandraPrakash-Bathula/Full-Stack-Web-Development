@@ -37,3 +37,11 @@ const isPalindrome = str => {
   /* Find the factorial of the number */
 const factorial = num => num < 2 ? 1 : num * factorial(num - 1);
 console.log(factorial(5)); // 120
+
+/* Fizz Buzz Problem : */
+for(let i = 1; i <= 15; i++) {
+    let output = '';
+    if(i % 3 === 0) output += 'Fizz';
+    if(i % 5 === 0) output += 'Buzz';
+    console.log(output || i);
+  }  
