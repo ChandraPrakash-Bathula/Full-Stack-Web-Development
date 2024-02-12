@@ -14,3 +14,8 @@ console.log(isEven(3)); // false
 
 const removeDuplicates = arr => [...new Set(arr)];
 console.log(removeDuplicates([1, 2, 2, 3])); // [1, 2, 3]
+
+/* Finding the Maximum Value in the array : */
+
+const max = arr => Math.max(...arr);
+console.log(max([1, 2, 3, 4])); // 4
