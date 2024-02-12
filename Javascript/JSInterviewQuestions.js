@@ -45,3 +45,7 @@ for(let i = 1; i <= 15; i++) {
     if(i % 5 === 0) output += 'Buzz';
     console.log(output || i);
   }  
+
+/* Flattening an Array : */
+const flatten = arr => arr.reduce((acc, val) => acc.concat(Array.isArray(val) ? flatten(val) : val), []);
+console.log(flatten([1, [2, [3, [4]], 5]])); // [1, 2, 3, 4, 5]
