@@ -34,3 +34,6 @@ const isPalindrome = str => {
   console.log(isPalindrome("madam")); // true
   console.log(isPalindrome("hello")); // false
   
+  /* Find the factorial of the number */
+const factorial = num => num < 2 ? 1 : num * factorial(num - 1);
+console.log(factorial(5)); // 120
