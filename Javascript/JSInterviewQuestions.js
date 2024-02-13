@@ -80,26 +80,26 @@ function y() {
 console.log(y());
 /* function : */
 
-function outer(){
-    var as =9;
-    function inner(){
-        console.log(as);
-    }
-    return inner;
+function outer() {
+  var as = 9;
+  function inner() {
+    console.log(as);
+  }
+  return inner;
 }
 outer()(); // returns and calls the inner() function in the same line.
 /* Constructor Function */
 
-function Counter (){
-    var count = 0;
-    this.incrementFunction = function (){
-        count++;
-        console.log(count);
-    }
-    this.decrementFunction = function (){
-        count--;
-        console.log(count);
-    }
+function Counter() {
+  var count = 0;
+  this.incrementFunction = function () {
+    count++;
+    console.log(count);
+  };
+  this.decrementFunction = function () {
+    count--;
+    console.log(count);
+  };
 }
 
 var counter1 = new Counter();
