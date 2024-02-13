@@ -78,3 +78,13 @@ function y() {
   }
 }
 console.log(y());
+/* function : */
+
+function outer(){
+    var as =9;
+    function inner(){
+        console.log(as);
+    }
+    return inner;
+}
+outer()(); // returns and calls the inner() function in the same line.
