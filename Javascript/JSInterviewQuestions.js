@@ -158,3 +158,31 @@ console.log(objectToQueryString({ name: 'John Doe', age: 30 })); // "name=John%2
 const isEmpty = (obj) => Object.keys(obj).length === 0;
 console.log(isEmpty({})); // true
 console.log(isEmpty({ a: 1 })); // false
+
+/* Getting All the Values of an Enum-like Object: */
+const enumValues = (obj) => Object.values(obj);
+console.log(enumValues({ RED: '#FF0000', GREEN: '#00FF00', BLUE: '#0000FF' })); // ['#FF0000', '#00FF00', '#0000FF']
+
+/* Implementing a Simple Publish/Subscribe Pattern: */
+class PubSub {
+  constructor() {
+    this.events = {};
+  }
+
+  subscribe(event, callback) {
+    if (!this.events[event]) {
+      this.events[event] = [];
+    }
+    this.events[event].push(callback);
+  }
+
+  publish(event, data) {
+    if (this.events[event]) {
+      this.events[event].forEach(callback => callback(data));
+    }
+  }
+}
+
+const pubSub = new PubSub();
+pubSub.subscribe('anEvent', data => console.log(data));
+pubSub.publish('anEvent', 'Hello World!');
