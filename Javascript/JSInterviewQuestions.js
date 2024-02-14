@@ -146,3 +146,10 @@ const findLongestWord = (str) => {
   }, "");
 };
 console.log(findLongestWord("The quick brown fox jumped over the lazy dog")); // "jumped"
+
+/* Converting Object to Query string parameter : */
+const objectToQueryString = (params) => 
+  Object.entries(params)
+    .map(([key, value]) => `${encodeURIComponent(key)}=${encodeURIComponent(value)}`)
+    .join('&');
+console.log(objectToQueryString({ name: 'John Doe', age: 30 })); // "name=John%20Doe&age=30"
