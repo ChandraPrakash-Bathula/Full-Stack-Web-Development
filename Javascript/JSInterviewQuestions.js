@@ -116,3 +116,25 @@ console.log(copied); // { a: 1, b: { c: 2 } }
 /* Merging Two arrays and removing duplicates : */
 const mergeArraysUnique = (arr1, arr2) => [...new Set([...arr1, ...arr2])];
 console.log(mergeArraysUnique([1, 2], [2, 3, 4])); // [1, 2, 3, 4]
+
+/* Checking for prime numbers : */
+const isPrime = (num) => {
+  for (let i = 2, s = Math.sqrt(num); i <= s; i++)
+    if (num % i === 0) return false;
+  return num > 1;
+};
+console.log(isPrime(5)); // true
+console.log(isPrime(4)); // false
+
+/* Implementing Debounce Function : */
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
