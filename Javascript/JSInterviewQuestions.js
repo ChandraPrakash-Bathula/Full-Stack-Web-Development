@@ -153,3 +153,8 @@ const objectToQueryString = (params) =>
     .map(([key, value]) => `${encodeURIComponent(key)}=${encodeURIComponent(value)}`)
     .join('&');
 console.log(objectToQueryString({ name: 'John Doe', age: 30 })); // "name=John%20Doe&age=30"
+
+/* Checking if an object is empty : */
+const isEmpty = (obj) => Object.keys(obj).length === 0;
+console.log(isEmpty({})); // true
+console.log(isEmpty({ a: 1 })); // false
