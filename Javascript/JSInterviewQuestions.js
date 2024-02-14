@@ -105,3 +105,10 @@ function Counter() {
 var counter1 = new Counter();
 
 counter1.incrementFunction();
+
+/* Creating a deep copy of an object: */
+
+const deepCopyObject = (obj) => JSON.parse(JSON.stringify(obj));
+const original = { a: 1, b: { c: 2 } };
+const copied = deepCopyObject(original);
+console.log(copied); // { a: 1, b: { c: 2 } }
