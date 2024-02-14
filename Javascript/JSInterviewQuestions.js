@@ -138,3 +138,11 @@ function debounce(func, wait) {
     timeout = setTimeout(later, wait);
   };
 }
+
+/* Finding the Longest word in a string : */
+const findLongestWord = (str) => {
+  return str.split(' ').reduce((longest, currentWord) => {
+    return currentWord.length > longest.length ? currentWord : longest;
+  }, "");
+};
+console.log(findLongestWord("The quick brown fox jumped over the lazy dog")); // "jumped"
