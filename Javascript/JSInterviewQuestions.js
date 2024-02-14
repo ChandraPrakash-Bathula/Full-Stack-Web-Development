@@ -112,3 +112,7 @@ const deepCopyObject = (obj) => JSON.parse(JSON.stringify(obj));
 const original = { a: 1, b: { c: 2 } };
 const copied = deepCopyObject(original);
 console.log(copied); // { a: 1, b: { c: 2 } }
+
+/* Merging Two arrays and removing duplicates : */
+const mergeArraysUnique = (arr1, arr2) => [...new Set([...arr1, ...arr2])];
+console.log(mergeArraysUnique([1, 2], [2, 3, 4])); // [1, 2, 3, 4]
