@@ -202,7 +202,7 @@ x(function y() {
   console.log("y");
 });
 
-/* Button Click Function : */
+/* Button Click Function : It counts when a user click on a button and console logs the button click count. */
 function attachingEventListener() {
   let count = 0;
   document
@@ -213,13 +213,13 @@ function attachingEventListener() {
 }
 attachingEventListener();
 
-/* Button Hover Function : It counts when a user click on a button and console logs the button click count. */
+/* Button Hover Function : It counts when a user hovers on a button and console logs the button hover count. */
 //function attachingEventListener() {
 //   let count = 0;
 //   document
 //     .getElementById("clickMe")
 //     .addEventListener('click', function button() {
-//       console.log("Bro Clicked the button for this", count++ , " times.!");
+//       console.log("Bro Hovered the button for this", count++ , " times.!");
 //     });
 // }
 // attachingEventListener();
