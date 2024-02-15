@@ -141,18 +141,21 @@ function debounce(func, wait) {
 
 /* Finding the Longest word in a string : */
 const findLongestWord = (str) => {
-  return str.split(' ').reduce((longest, currentWord) => {
+  return str.split(" ").reduce((longest, currentWord) => {
     return currentWord.length > longest.length ? currentWord : longest;
   }, "");
 };
 console.log(findLongestWord("The quick brown fox jumped over the lazy dog")); // "jumped"
 
 /* Converting Object to Query string parameter : */
-const objectToQueryString = (params) => 
+const objectToQueryString = (params) =>
   Object.entries(params)
-    .map(([key, value]) => `${encodeURIComponent(key)}=${encodeURIComponent(value)}`)
-    .join('&');
-console.log(objectToQueryString({ name: 'John Doe', age: 30 })); // "name=John%20Doe&age=30"
+    .map(
+      ([key, value]) =>
+        `${encodeURIComponent(key)}=${encodeURIComponent(value)}`
+    )
+    .join("&");
+console.log(objectToQueryString({ name: "John Doe", age: 30 })); // "name=John%20Doe&age=30"
 
 /* Checking if an object is empty : */
 const isEmpty = (obj) => Object.keys(obj).length === 0;
@@ -161,7 +164,7 @@ console.log(isEmpty({ a: 1 })); // false
 
 /* Getting All the Values of an Enum-like Object: */
 const enumValues = (obj) => Object.values(obj);
-console.log(enumValues({ RED: '#FF0000', GREEN: '#00FF00', BLUE: '#0000FF' })); // ['#FF0000', '#00FF00', '#0000FF']
+console.log(enumValues({ RED: "#FF0000", GREEN: "#00FF00", BLUE: "#0000FF" })); // ['#FF0000', '#00FF00', '#0000FF']
 
 /* Implementing a Simple Publish/Subscribe Pattern: */
 class PubSub {
@@ -178,11 +181,45 @@ class PubSub {
 
   publish(event, data) {
     if (this.events[event]) {
-      this.events[event].forEach(callback => callback(data));
+      this.events[event].forEach((callback) => callback(data));
     }
   }
 }
 
 const pubSub = new PubSub();
-pubSub.subscribe('anEvent', data => console.log(data));
-pubSub.publish('anEvent', 'Hello World!');
+pubSub.subscribe("anEvent", (data) => console.log(data));
+pubSub.publish("anEvent", "Hello World!");
+
+setTimeout(function () {
+  console.log("Hey Bro.!");
+}, 5000);
+
+function x(y) {
+  console.log("x");
+  y();
+}
+x(function y() {
+  console.log("y");
+});
+
+/* Button Click Function : */
+function attachingEventListener() {
+  let count = 0;
+  document
+    .getElementById("clickMe")
+    .addEventListener('mouseenter', function button() {
+      console.log("Bro hovered the button for this", count++ , " times.!");
+    });
+}
+attachingEventListener();
+
+// Button Hover Function : 
+//function attachingEventListener() {
+//   let count = 0;
+//   document
+//     .getElementById("clickMe")
+//     .addEventListener('click', function button() {
+//       console.log("Bro Clicked the button for this", count++ , " times.!");
+//     });
+// }
+// attachingEventListener();
