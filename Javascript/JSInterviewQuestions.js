@@ -213,7 +213,7 @@ function attachingEventListener() {
 }
 attachingEventListener();
 
-// Button Hover Function : 
+/* Button Hover Function : It counts when a user click on a button and console logs the button click count. */
 //function attachingEventListener() {
 //   let count = 0;
 //   document
