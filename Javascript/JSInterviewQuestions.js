@@ -293,7 +293,17 @@ const calculations = function(radius,logic){
   }
   return output;
 }
-console.log(radius[i]);
+console.log(radius[0]);
 console.log(calculations(radius,area));
 console.log(calculations(radius,circumeference));
 console.log(calculations(radius,diameter));
+
+Array.prototype.calculation = function(logic){
+  let output = [];
+  for (let i = 0; i < this.length; i++) {
+    output.push(logic(this[i]));
+  }
+  return output;
+}
+
+console.log(radius.calculation(area));
