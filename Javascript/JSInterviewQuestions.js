@@ -230,14 +230,14 @@ setTimeout(function callback() {
 }, 5000);
 console.log("End");
 
-/* Proof that the setTimeOut() like event listeners executes only after the main block execution. */
+// /* Proof that the setTimeOut() like event listeners executes only after the main block execution. */
 
-let startDate = new Date().getTime();
-let endDate = startDate;
-while(endDate < startDate + 10000){
-endDate = new Date().getTime()
-}
-console.log('Bro While Loop Expired Here!');
+// let startDate = new Date().getTime();
+// let endDate = startDate;
+// while(endDate < startDate + 10000){
+// endDate = new Date().getTime()
+// }
+// console.log('Bro While Loop Expired Here!');
 
 /* Radius of the circles : */
 
