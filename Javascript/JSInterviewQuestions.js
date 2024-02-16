@@ -318,8 +318,14 @@ function triple(x){
 return x * 3;
 }
 
+function binary(x){
+return x.toString(x)
+}
 const mapDouble = array.map(double);
 console.log(mapDouble);
 
-const mapTriple = array.map(double);
+const mapTriple = array.map(triple);
 console.log(mapTriple);
+
+const mapBinary = array.map(binary);
+console.log(mapBinary);
