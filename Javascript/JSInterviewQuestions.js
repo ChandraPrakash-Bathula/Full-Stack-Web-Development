@@ -207,8 +207,8 @@ function attachingEventListener() {
   let count = 0;
   document
     .getElementById("clickMe")
-    .addEventListener('mouseenter', function button() {
-      console.log("Bro hovered the button for this", count++ , " times.!");
+    .addEventListener("mouseenter", function button() {
+      console.log("Bro hovered the button for this", count++, " times.!");
     });
 }
 attachingEventListener();
@@ -223,3 +223,76 @@ attachingEventListener();
 //     });
 // }
 // attachingEventListener();
+
+console.log("Start");
+setTimeout(function callback() {
+  console.log("Call Back Function");
+}, 5000);
+console.log("End");
+
+/* Proof that the setTimeOut() like event listeners executes only after the main block execution. */
+
+let startDate = new Date().getTime();
+let endDate = startDate;
+while(endDate < startDate + 10000){
+endDate = new Date().getTime()
+}
+console.log('Bro While Loop Expired Here!');
+
+/* Radius of the circles : */
+
+const radius = [3, 4, 5, 6];
+
+const circleArea = function (radius) {
+  let output = [];
+  for (let i = 0; i < radius.length; i++) {
+    output.push(Math.PI * radius[i] * radius[i]);
+  }
+  return output;
+};
+console.log(circleArea(radius));
+
+/* Circumference of a circle : */
+
+const circumeferences = function (radius) {
+  let output = [];
+  for (let i = 0; i < radius.length; i++) {
+    output.push(2 * Math.PI * radius[i]);
+  }
+  return output;
+};
+console.log(circumeferences(radius));
+
+/* Diameter of a circle : */
+const calculateDiameter = function (radius) {
+  let output = [];
+  for (let i = 0; i < radius.length; i++) {
+    output.push(2 * radius[i]);
+  }
+  return output;
+};
+console.log(calculateDiameter(radius));
+
+/* Optimized versions for the above code : */
+const area = function (radius){
+  return Math.PI * radius * radius;
+}
+
+const diameter = function (radius){
+ return 2 * radius;
+}
+
+const circumeference = function (radius){
+return 2 * Math.PI * radius;
+}
+
+const calculations = function(radius,logic){
+  let output = [];
+  for (let i = 0; i < radius.length; i++) {
+    output.push(logic(radius[i]));
+  }
+  return output;
+}
+console.log(calculations(radius,area));
+console.log(calculations(radius,circumeference));
+console.log(calculations(radius,diameter));
