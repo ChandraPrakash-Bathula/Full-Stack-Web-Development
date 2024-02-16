@@ -308,7 +308,7 @@ Array.prototype.calculation = function(logic){
 
 console.log(radius.calculation(area));
 
-const array = [3,2,5,4];
+const array = [5,1,2,3,6];
 
 function double (x){
 return x * 2;
@@ -319,7 +319,7 @@ return x * 3;
 }
 
 function binary(x){
-return x.toString(x)
+return x.toString(2)
 }
 const mapDouble = array.map(double);
 console.log(mapDouble);
