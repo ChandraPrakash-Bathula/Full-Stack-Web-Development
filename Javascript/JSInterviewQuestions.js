@@ -314,5 +314,12 @@ function double (x){
 return x * 2;
 }
 
-const mapOutput = array.map(double);
-console.log(mapOutput);
+function triple(x){
+return x * 3;
+}
+
+const mapDouble = array.map(double);
+console.log(mapDouble);
+
+const mapTriple = array.map(double);
+console.log(mapTriple);
