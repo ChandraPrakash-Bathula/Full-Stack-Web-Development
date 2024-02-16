@@ -307,3 +307,12 @@ Array.prototype.calculation = function(logic){
 }
 
 console.log(radius.calculation(area));
+
+const array = [3,2,5,4];
+
+function double (x){
+return x * 2;
+}
+
+const mapOutput = array.map(double);
+console.log(mapOutput);
