@@ -293,6 +293,7 @@ const calculations = function(radius,logic){
   }
   return output;
 }
+console.log(radius[i]);
 console.log(calculations(radius,area));
 console.log(calculations(radius,circumeference));
 console.log(calculations(radius,diameter));
