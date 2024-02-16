@@ -329,3 +329,8 @@ console.log(mapTriple);
 
 const mapBinary = array.map(binary);
 console.log(mapBinary);
+
+const mapBinaryy = array.map(function binary(x){
+  return x.toString(2)
+  });
+console.log(mapBinary);
