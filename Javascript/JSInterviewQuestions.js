@@ -274,52 +274,52 @@ const calculateDiameter = function (radius) {
 console.log(calculateDiameter(radius));
 
 /* Optimized versions for the above code : */
-const area = function (radius){
+const area = function (radius) {
   return Math.PI * radius * radius;
-}
+};
 
-const diameter = function (radius){
- return 2 * radius;
-}
+const diameter = function (radius) {
+  return 2 * radius;
+};
 
-const circumeference = function (radius){
-return 2 * Math.PI * radius;
-}
+const circumeference = function (radius) {
+  return 2 * Math.PI * radius;
+};
 
-const calculations = function(radius,logic){
+const calculations = function (radius, logic) {
   let output = [];
   for (let i = 0; i < radius.length; i++) {
     output.push(logic(radius[i]));
   }
   return output;
-}
+};
 console.log(radius[0]);
-console.log(calculations(radius,area));
-console.log(calculations(radius,circumeference));
-console.log(calculations(radius,diameter));
+console.log(calculations(radius, area));
+console.log(calculations(radius, circumeference));
+console.log(calculations(radius, diameter));
 
-Array.prototype.calculation = function(logic){
+Array.prototype.calculation = function (logic) {
   let output = [];
   for (let i = 0; i < this.length; i++) {
     output.push(logic(this[i]));
   }
   return output;
-}
+};
 
 console.log(radius.calculation(area));
 
-const array = [5,1,2,3,6];
+const array = [5, 1, 2, 3, 6];
 
-function double (x){
-return x * 2;
+function double(x) {
+  return x * 2;
 }
 
-function triple(x){
-return x * 3;
+function triple(x) {
+  return x * 3;
 }
 
-function binary(x){
-return x.toString(2)
+function binary(x) {
+  return x.toString(2);
 }
 const mapDouble = array.map(double);
 console.log(mapDouble);
@@ -330,7 +330,7 @@ console.log(mapTriple);
 const mapBinary = array.map(binary);
 console.log(mapBinary);
 
-const mapBinaryy = array.map(function binary(x){
-  return x.toString(2)
-  });
-console.log(mapBinary);
+const mapBinaryy = array.map(function binary(x) {
+  return x.toString(2);
+});
+console.log(mapBinaryy);
