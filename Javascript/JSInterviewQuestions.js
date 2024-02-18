@@ -334,3 +334,28 @@ const mapBinaryy = array.map(function binary(x) {
   return x.toString(2);
 });
 console.log(mapBinaryy);
+const mapBinar = array.map((x) => {
+  return x.toString(2);
+});
+console.log(mapBinar);
+
+const mapBinarhigherOrder = array.map((x) => x.toString(2));
+console.log(mapBinarhigherOrder);
+
+/* Filter : odd numbers */
+function odd(x) {
+  return x % 2;
+}
+const filtering = array.filter(odd);
+console.log(filtering);
+
+const arr = [5, 6, 3, 4, 1];
+
+function findSum(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum = sum + arr[i];
+  }
+  return sum;
+}
+console.log(findSum(arr));
