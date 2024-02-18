@@ -327,6 +327,13 @@ console.log(mapDouble);
 const mapTriple = array.map(triple);
 console.log(mapTriple);
 
+const mapBinary = array.map(binary);
+console.log(mapBinary);
+
+const mapBinaryy = array.map(function binary(x) {
+  return x.toString(2);
+});
+console.log(mapBinaryy);
 const mapBinar = array.map((x) => {
   return x.toString(2);
 });
@@ -373,7 +380,6 @@ console.log(sumOutput);
 const findMaxOutput = arr.reduce(function (max, curr) {
   if (curr > max) {
     max = curr;
-  }
-  return max;
+}    return max;
 }, 0);
 console.log(findMaxOutput);
