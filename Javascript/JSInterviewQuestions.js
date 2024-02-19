@@ -401,6 +401,11 @@ const discountedProducts = products.map(product => ({
 }));
 console.log(discountedProducts);
 
+/* Scenario 3: Capitalizing Strings */
+
+const namess = ['alice', 'bob', 'charlie'];
+const capitalizedNames = namess.map(name => name.charAt(0).toUpperCase() + name.slice(1));
+console.log(capitalizedNames); // Output: ['Alice', 'Bob', 'Charlie']
 
 /* filter - Selecting Specific Items
 Scenario 1: Filtering Specific Elements */
