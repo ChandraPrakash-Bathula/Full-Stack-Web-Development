@@ -443,6 +443,12 @@ const mixedValues = [0, 1, false, 2, '', 3, null, 'a', undefined, NaN];
 const truthyValues = mixedValues.filter(Boolean);
 console.log(truthyValues);
 
+/* Scenario 4 : Filtering by Length */
+
+const words = ['bear', 'cat', 'elephant', 'dog'];
+const longWords = words.filter(word => word.length > 3);
+console.log(longWords); 
+
 /* reduce - Aggregating Data
 Scenario 1: Summing Values */
 
