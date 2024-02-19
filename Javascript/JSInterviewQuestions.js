@@ -467,3 +467,20 @@ const nameCounts = names.reduce((acc, name) => {
   return acc;
 }, {});
 console.log(nameCounts); 
+
+/* Scenario 4 : Grouping Objects by a Property */
+
+const people = [
+  { name: 'Alice', year: 1980 },
+  { name: 'Bob', year: 1980 },
+  { name: 'Charlie', year: 1990 },
+  { name: 'Diana', year: 1990 }
+];
+const groupedByYear = people.reduce((acc, person) => {
+  if (!acc[person.year]) {
+    acc[person.year] = [];
+  }
+  acc[person.year].push(person);
+  return acc;
+}, {});
+console.log(groupedByYear);
