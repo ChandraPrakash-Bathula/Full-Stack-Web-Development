@@ -424,3 +424,9 @@ console.log(total); // Output: 100
 
 /* Scenario 2: Building a Histogram */
 
+const names = ["Alice", "Bob", "Alice", "Bob", "Charlie"];
+const nameCounts = names.reduce((acc, name) => {
+    acc[name] = (acc[name] || 0) + 1;
+    return acc;
+}, {});
+console.log(nameCounts); // Output: {Alice: 2, Bob: 2, Charlie: 1}
