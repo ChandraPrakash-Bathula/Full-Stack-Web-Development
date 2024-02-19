@@ -380,7 +380,8 @@ console.log(sumOutput);
 const findMaxOutput = arr.reduce(function (max, curr) {
   if (curr > max) {
     max = curr;
-}    return max;
+  }
+  return max;
 }, 0);
 console.log(findMaxOutput);
 
@@ -389,49 +390,68 @@ map - Transforming Data
 Scenario 1: Converting Temperatures */
 
 const celsiusTemps = [0, 10, 20, 30];
-const fahrenheitTemps = celsiusTemps.map(temp => temp * 9 / 5 + 32);
+const fahrenheitTemps = celsiusTemps.map((temp) => (temp * 9) / 5 + 32);
 console.log(fahrenheitTemps); // Output: [32, 50, 68, 86]
 
 /* Scenario 2: Updating a List of Objects */
 
-const products = [{name: "Product 1", price: 100}, {name: "Product 2", price: 200}];
-const discountedProducts = products.map(product => ({
-    ...product,
-    price: product.price * 0.9 // 10% discount
+const products = [
+  { name: "Product 1", price: 100 },
+  { name: "Product 2", price: 200 },
+];
+const discountedProducts = products.map((product) => ({
+  ...product,
+  price: product.price * 0.9, // 10% discount
 }));
 console.log(discountedProducts);
 
 /* Scenario 3: Capitalizing Strings */
 
-const namess = ['alice', 'bob', 'charlie'];
-const capitalizedNames = namess.map(name => name.charAt(0).toUpperCase() + name.slice(1));
-console.log(capitalizedNames); // Output: ['Alice', 'Bob', 'Charlie']
+const namess = ["alice", "bob", "charlie"];
+const capitalizedNames = namess.map(
+  (name) => name.charAt(0).toUpperCase() + name.slice(1)
+);
+console.log(capitalizedNames);
+
+/* Scenario 4: Extracting Specific Object Properties */
+
+const users = [
+  { name: "Alice", email: "alice@example.com" },
+  { name: "Bob", email: "bob@example.com" },
+];
+const emails = users.map((user) => user.email);
+console.log(emails);
 
 /* filter - Selecting Specific Items
 Scenario 1: Filtering Specific Elements */
 
 const numbers = [1, 2, 3, 4, 5, 6];
-const evenNumbers = numbers.filter(number => number % 2 === 0);
+const evenNumbers = numbers.filter((number) => number % 2 === 0);
 console.log(evenNumbers); // Output: [2, 4, 6]
 
 /* Scenario 1: Removing Specific Items : */
 
 const tasks = ["Buy milk", "Clean kitchen", "Fix laptop", "Task done"];
-const activeTasks = tasks.filter(task => !task.toLowerCase().includes("done"));
+const activeTasks = tasks.filter(
+  (task) => !task.toLowerCase().includes("done")
+);
 console.log(activeTasks); // Output: ["Buy milk", "Clean kitchen", "Fix laptop"]
 
 /* reduce - Aggregating Data
 Scenario 1: Summing Values */
 
 const values = [10, 20, 30, 40];
-const total = values.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+const total = values.reduce(
+  (accumulator, currentValue) => accumulator + currentValue,
+  0
+);
 console.log(total); // Output: 100
 
 /* Scenario 2: Building a Histogram */
 
 const names = ["Alice", "Bob", "Alice", "Bob", "Charlie"];
 const nameCounts = names.reduce((acc, name) => {
-    acc[name] = (acc[name] || 0) + 1;
-    return acc;
+  acc[name] = (acc[name] || 0) + 1;
+  return acc;
 }, {});
 console.log(nameCounts); // Output: {Alice: 2, Bob: 2, Charlie: 1}
