@@ -400,3 +400,17 @@ const discountedProducts = products.map(product => ({
     price: product.price * 0.9 // 10% discount
 }));
 console.log(discountedProducts);
+
+
+/* filter - Selecting Specific Items
+Scenario 1: Filtering Specific Elements */
+
+const numbers = [1, 2, 3, 4, 5, 6];
+const evenNumbers = numbers.filter(number => number % 2 === 0);
+console.log(evenNumbers); // Output: [2, 4, 6]
+
+/* Scenario 1: Removing Specific Items : */
+
+const tasks = ["Buy milk", "Clean kitchen", "Fix laptop", "Task done"];
+const activeTasks = tasks.filter(task => !task.toLowerCase().includes("done"));
+console.log(activeTasks); // Output: ["Buy milk", "Clean kitchen", "Fix laptop"]
