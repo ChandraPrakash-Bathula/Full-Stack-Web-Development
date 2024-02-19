@@ -468,6 +468,12 @@ const nameCounts = names.reduce((acc, name) => {
 }, {});
 console.log(nameCounts); 
 
+/* Scenario 3: Finding Maximum Value */
+
+const numberss = [10, 5, 100, 2, 1000];
+const maxNumber = numberss.reduce((max, current) => current > max ? current : max, numberss[0]);
+console.log(maxNumber);
+
 /* Scenario 4 : Grouping Objects by a Property */
 
 const people = [
