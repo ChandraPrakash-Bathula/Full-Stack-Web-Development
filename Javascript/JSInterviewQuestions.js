@@ -421,3 +421,6 @@ Scenario 1: Summing Values */
 const values = [10, 20, 30, 40];
 const total = values.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
 console.log(total); // Output: 100
+
+/* Scenario 2: Building a Histogram */
+
