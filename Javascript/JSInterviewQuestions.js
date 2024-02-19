@@ -391,7 +391,7 @@ Scenario 1: Converting Temperatures */
 
 const celsiusTemps = [0, 10, 20, 30];
 const fahrenheitTemps = celsiusTemps.map((temp) => (temp * 9) / 5 + 32);
-console.log(fahrenheitTemps); // Output: [32, 50, 68, 86]
+console.log(fahrenheitTemps);
 
 /* Scenario 2: Updating a List of Objects */
 
@@ -401,7 +401,7 @@ const products = [
 ];
 const discountedProducts = products.map((product) => ({
   ...product,
-  price: product.price * 0.9, // 10% discount
+  price: product.price * 0.9, 
 }));
 console.log(discountedProducts);
 
@@ -427,15 +427,21 @@ Scenario 1: Filtering Specific Elements */
 
 const numbers = [1, 2, 3, 4, 5, 6];
 const evenNumbers = numbers.filter((number) => number % 2 === 0);
-console.log(evenNumbers); // Output: [2, 4, 6]
+console.log(evenNumbers); 
 
-/* Scenario 1: Removing Specific Items : */
+/* Scenario 2: Removing Specific Items : */
 
 const tasks = ["Buy milk", "Clean kitchen", "Fix laptop", "Task done"];
 const activeTasks = tasks.filter(
   (task) => !task.toLowerCase().includes("done")
 );
-console.log(activeTasks); // Output: ["Buy milk", "Clean kitchen", "Fix laptop"]
+console.log(activeTasks); 
+
+/* Scenario 3 : Excluding specific values */
+
+const mixedValues = [0, 1, false, 2, '', 3, null, 'a', undefined, NaN];
+const truthyValues = mixedValues.filter(Boolean);
+console.log(truthyValues);
 
 /* reduce - Aggregating Data
 Scenario 1: Summing Values */
@@ -445,7 +451,7 @@ const total = values.reduce(
   (accumulator, currentValue) => accumulator + currentValue,
   0
 );
-console.log(total); // Output: 100
+console.log(total); 
 
 /* Scenario 2: Building a Histogram */
 
@@ -454,4 +460,4 @@ const nameCounts = names.reduce((acc, name) => {
   acc[name] = (acc[name] || 0) + 1;
   return acc;
 }, {});
-console.log(nameCounts); // Output: {Alice: 2, Bob: 2, Charlie: 1}
+console.log(nameCounts); 
