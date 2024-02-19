@@ -383,3 +383,20 @@ const findMaxOutput = arr.reduce(function (max, curr) {
 }    return max;
 }, 0);
 console.log(findMaxOutput);
+
+/* Some More Examples of Map, Filter and Reduce:
+map - Transforming Data
+Scenario 1: Converting Temperatures */
+
+const celsiusTemps = [0, 10, 20, 30];
+const fahrenheitTemps = celsiusTemps.map(temp => temp * 9 / 5 + 32);
+console.log(fahrenheitTemps); // Output: [32, 50, 68, 86]
+
+/* Scenario 2: Updating a List of Objects */
+
+const products = [{name: "Product 1", price: 100}, {name: "Product 2", price: 200}];
+const discountedProducts = products.map(product => ({
+    ...product,
+    price: product.price * 0.9 // 10% discount
+}));
+console.log(discountedProducts);
