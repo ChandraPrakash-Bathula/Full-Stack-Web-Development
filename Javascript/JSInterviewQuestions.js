@@ -532,3 +532,8 @@ const outputReduce = user.reduce(function (acc, curr) {
 }, []);
 
 console.log(outputReduce);
+
+/*Simple Example : */
+const num = [1, 2, 3, 4, 5];
+const sum = num.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+console.log(sum); // Output: 15
