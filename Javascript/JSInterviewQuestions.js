@@ -401,7 +401,7 @@ const products = [
 ];
 const discountedProducts = products.map((product) => ({
   ...product,
-  price: product.price * 0.9, 
+  price: product.price * 0.9,
 }));
 console.log(discountedProducts);
 
@@ -422,12 +422,25 @@ const users = [
 const emails = users.map((user) => user.email);
 console.log(emails);
 
+/* Scenario 5: Full Name */
+const user = [
+  { fname: "Akshay", lName: "Kumar", age: 24 },
+  { fname: "Cyril", lName: "Diagne", age: 27 },
+  { fname: "Pawan", lName: "Kalyan", age: 50 },
+  { fname: "Tom", lName: "Cruise", age: 54 },
+  { fname: "Micheal", lName: "Jackson", age: 28 },
+  { fname: "Micheal", lName: "Durbin", age: 28 },
+];
+
+const userOutput = user.map((x) => x.fname + " " + x.lName);
+console.log(userOutput);
+
 /* filter - Selecting Specific Items
 Scenario 1: Filtering Specific Elements */
 
 const numbers = [1, 2, 3, 4, 5, 6];
 const evenNumbers = numbers.filter((number) => number % 2 === 0);
-console.log(evenNumbers); 
+console.log(evenNumbers);
 
 /* Scenario 2: Removing Specific Items : */
 
@@ -435,19 +448,24 @@ const tasks = ["Buy milk", "Clean kitchen", "Fix laptop", "Task done"];
 const activeTasks = tasks.filter(
   (task) => !task.toLowerCase().includes("done")
 );
-console.log(activeTasks); 
+console.log(activeTasks);
 
 /* Scenario 3 : Excluding specific values */
 
-const mixedValues = [0, 1, false, 2, '', 3, null, 'a', undefined, NaN];
+const mixedValues = [0, 1, false, 2, "", 3, null, "a", undefined, NaN];
 const truthyValues = mixedValues.filter(Boolean);
 console.log(truthyValues);
 
 /* Scenario 4 : Filtering by Length */
 
-const words = ['bear', 'cat', 'elephant', 'dog'];
-const longWords = words.filter(word => word.length > 3);
-console.log(longWords); 
+const words = ["bear", "cat", "elephant", "dog"];
+const longWords = words.filter((word) => word.length > 3);
+console.log(longWords);
+
+/* Scenario 5: Filtering the fnames for less than 30 */
+
+const outputFilter = user.filter((x) => x.age < 30).map((x) => x.fname);
+console.log(outputFilter);
 
 /* reduce - Aggregating Data
 Scenario 1: Summing Values */
@@ -457,7 +475,7 @@ const total = values.reduce(
   (accumulator, currentValue) => accumulator + currentValue,
   0
 );
-console.log(total); 
+console.log(total);
 
 /* Scenario 2: Building a Histogram */
 
@@ -466,21 +484,24 @@ const nameCounts = names.reduce((acc, name) => {
   acc[name] = (acc[name] || 0) + 1;
   return acc;
 }, {});
-console.log(nameCounts); 
+console.log(nameCounts);
 
 /* Scenario 3: Finding Maximum Value */
 
 const numberss = [10, 5, 100, 2, 1000];
-const maxNumber = numberss.reduce((max, current) => current > max ? current : max, numberss[0]);
+const maxNumber = numberss.reduce(
+  (max, current) => (current > max ? current : max),
+  numberss[0]
+);
 console.log(maxNumber);
 
 /* Scenario 4 : Grouping Objects by a Property */
 
 const people = [
-  { name: 'Alice', year: 1980 },
-  { name: 'Bob', year: 1980 },
-  { name: 'Charlie', year: 1990 },
-  { name: 'Diana', year: 1990 }
+  { name: "Alice", year: 1980 },
+  { name: "Bob", year: 1980 },
+  { name: "Charlie", year: 1990 },
+  { name: "Diana", year: 1990 },
 ];
 const groupedByYear = people.reduce((acc, person) => {
   if (!acc[person.year]) {
@@ -490,3 +511,7 @@ const groupedByYear = people.reduce((acc, person) => {
   return acc;
 }, {});
 console.log(groupedByYear);
+
+/* Scenario 5 : finding out the similar and unique values. */
+
+
