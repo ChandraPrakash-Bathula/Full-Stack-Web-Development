@@ -514,4 +514,21 @@ console.log(groupedByYear);
 
 /* Scenario 5 : finding out the similar and unique values. */
 
+const userOuputAge = user.reduce((acc, curr) => {
+  if (acc[curr.age]) {
+    acc[curr.age] = ++acc[curr.age];
+  } else {
+    acc[curr.age] = 1;
+  }
+  return acc;
+}, {});
+console.log(userOuputAge);
 
+const outputReduce = user.reduce(function (acc, curr) {
+  if (curr.age < 30) {
+    acc.push(curr.fname); 
+  }
+  return acc;
+}, []);
+
+console.log(outputReduce);
