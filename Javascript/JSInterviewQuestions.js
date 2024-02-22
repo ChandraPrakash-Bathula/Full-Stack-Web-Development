@@ -536,4 +536,16 @@ console.log(outputReduce);
 /*Simple Example : */
 const num = [1, 2, 3, 4, 5];
 const sum = num.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
-console.log(sum); // Output: 15
+console.log(sum); 
+
+/* Fruit Count : */
+
+const fruits = ['apple', 'banana', 'orange', 'apple', 'orange', 'banana', 'orange'];
+const frequency = fruits.reduce((accumulator, fruit) => {
+  accumulator[fruit] = (accumulator[fruit] || 0) + 1;
+  return accumulator;
+}, {});
+
+console.log(frequency);
+
+
