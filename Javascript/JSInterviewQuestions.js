@@ -548,4 +548,20 @@ const frequency = fruits.reduce((accumulator, fruit) => {
 
 console.log(frequency);
 
+/* Electronics price: */
 
+const orders = [
+  { productId: 1, productName: 'Laptop', category: 'Electronics', amount: 1000 },
+  { productId: 2, productName: 'Shirt', category: 'Apparel', amount: 50 },
+  { productId: 3, productName: 'Smartphone', category: 'Electronics', amount: 500 },
+  { productId: 4, productName: 'Coffee Maker', category: 'Home Appliances', amount: 100 }
+];
+
+const totalElectronicsValue = orders.reduce((accumulator, order) => {
+  if (order.category === 'Electronics') {
+    return accumulator + order.amount;
+  }
+  return accumulator;
+}, 0);
+
+console.log(totalElectronicsValue);
