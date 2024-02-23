@@ -77,7 +77,6 @@ Promise.all([P1, P2, P3]).then((res) => {
 }).catch(err=>{
     console.error(err);
 });
-
 /* Promise.alllsettled()*/
 const P4 = new Promise(function (resolve, reject) {
     setTimeout(function () {
