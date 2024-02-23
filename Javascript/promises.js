@@ -14,16 +14,16 @@ createOrder(cart)
   .then(function (orderId) {
     console.log(orderId);
     return orderId;
+  })  .catch(function (err) {
+    console.log(err.message);
+    // alert(err.message)
   })
   .then(function (orderId) {
    return proceedToPayment(orderId);
   }).then(function(paymentInfo){
     console.log(paymentInfo)
   })
-  .catch(function (err) {
-    console.log(err.message);
-    // alert(err.message)
-  });
+
 
 function createOrder() {
   const pr = new Promise(function (resolve, reject) {
