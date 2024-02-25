@@ -180,7 +180,7 @@ const P10 = new Promise(function (resolve, reject) {
 
 
   /* Deep Cloning Object : */
-  
+
   function deepClone(obj) {
     if (obj === null || typeof obj !== "object") {
       return obj;
@@ -213,3 +213,38 @@ const P10 = new Promise(function (resolve, reject) {
   console.log(original.b === cloned.b); // false
   console.log(original.d === cloned.d); // false
   
+  /* Async Series : */
+
+  function asyncSeries(tasks, finalCallback) {
+    let taskIndex = 0;
+  
+    function executeTask() {
+      if (taskIndex === tasks.length) {
+        return finalCallback();
+      }
+  
+      const task = tasks[taskIndex];
+      task(() => {
+        taskIndex++;
+        executeTask();
+      });
+    }
+  
+    executeTask();
+  }
+  
+  // Example usage
+  const tasks = [
+    (cb) => {
+      console.log("Task 1");
+      setTimeout(cb, 1000); // Simulate async operation
+    },
+    (cb) => {
+      console.log("Task 2");
+      setTimeout(cb, 500); // Simulate async operation
+    },
+  ];
+  
+  asyncSeries(tasks, () => {
+    console.log("All tasks completed!");
+  });  
