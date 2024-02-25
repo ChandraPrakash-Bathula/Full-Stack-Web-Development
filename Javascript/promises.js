@@ -152,3 +152,28 @@ const P10 = new Promise(function (resolve, reject) {
       console.error(err);
       console.log(err.errors)
   });
+
+
+  /* Interview Questions Delete Later : */
+
+ /* Debounce */
+
+  function debounce(func, wait) {
+    let timeout;
+  
+    return function executedFunction(...args) {
+      const later = () => {
+        clearTimeout(timeout);
+        func(...args);
+      };
+  
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+    };
+  }
+  
+  // Example usage
+  const debouncedFunction = debounce(() => console.log('Hello'), 1000);
+  debouncedFunction();
+  debouncedFunction();
+  debouncedFunction(); // Only this call leads to a console.log after 1 second
