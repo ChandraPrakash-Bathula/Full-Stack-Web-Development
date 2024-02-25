@@ -177,3 +177,39 @@ const P10 = new Promise(function (resolve, reject) {
   debouncedFunction();
   debouncedFunction();
   debouncedFunction(); // Only this call leads to a console.log after 1 second
+
+
+  /* Deep Cloning Object : */
+  
+  function deepClone(obj) {
+    if (obj === null || typeof obj !== "object") {
+      return obj;
+    }
+  
+    if (Array.isArray(obj)) {
+      let arrCopy = [];
+      obj.forEach((val, index) => {
+        arrCopy[index] = deepClone(val);
+      });
+      return arrCopy;
+    }
+  
+    if (typeof obj === "object") {
+      let objCopy = {};
+      for (let key in obj) {
+        if (obj.hasOwnProperty(key)) {
+          objCopy[key] = deepClone(obj[key]);
+        }
+      }
+      return objCopy;
+    }
+  }
+  
+  // Example usage
+  const original = { a: 1, b: { c: 2 }, d: [3, 4] };
+  const cloned = deepClone(original);
+  console.log(cloned); // { a: 1, b: { c: 2 }, d: [3, 4] }
+  console.log(original === cloned); // false
+  console.log(original.b === cloned.b); // false
+  console.log(original.d === cloned.d); // false
+  
