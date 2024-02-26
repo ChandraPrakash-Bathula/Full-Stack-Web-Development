@@ -293,3 +293,31 @@ const P10 = new Promise(function (resolve, reject) {
     this.left = left;
     this.right = right;
   }  
+
+  function serialize(root) {
+    if (!root) return 'null,';
+    return `${root.val},${serialize(root.left)}${serialize(root.right)}`;
+  }
+  
+  function deserialize(data) {
+    const list = data.split(',');
+  
+    function buildTree() {
+      const val = list.shift();
+      if (val === 'null') return null;
+      const node = new TreeNode(parseInt(val, 10));
+      node.left = buildTree();
+      node.right = buildTree();
+      return node;
+    }
+  
+    return buildTree();
+  }
+  
+  // Example usage
+  const tree = new TreeNode(1, new TreeNode(2), new TreeNode(3, new TreeNode(4), new TreeNode(5)));
+  const serializedTree = serialize(tree);
+  console.log(serializedTree); // "1,2,null,null,3,4,null,null,5,null,null,"
+  const deserializedTree = deserialize(serializedTree);
+  console.log(deserializedTree);
+  
