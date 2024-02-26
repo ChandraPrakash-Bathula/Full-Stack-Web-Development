@@ -321,3 +321,26 @@ const P10 = new Promise(function (resolve, reject) {
   const deserializedTree = deserialize(serializedTree);
   console.log(deserializedTree);
   
+  /* Finding the First Non-repeating Character of a string : */
+
+  function firstNonRepeatingCharacter(str) {
+    const charCount = {};
+  
+    // Count the occurrences of each character
+    for (let char of str) {
+      charCount[char] = (charCount[char] || 0) + 1;
+    }
+  
+    // Find the first character that appears only once
+    for (let char of str) {
+      if (charCount[char] === 1) {
+        return char;
+      }
+    }
+  
+    return -1; // No non-repeating character found
+  }
+  
+  // Example usage
+  console.log(firstNonRepeatingCharacter('javascript')); // 'j'
+  console.log(firstNonRepeatingCharacter('aabbcc')); // -1  
