@@ -248,3 +248,40 @@ const P10 = new Promise(function (resolve, reject) {
   asyncSeries(tasks, () => {
     console.log("All tasks completed!");
   });  
+
+  /* Promise all advanced level */
+
+  function promiseAll(promises) {
+    return new Promise((resolve, reject) => {
+      let results = [];
+      let completedPromises = 0;
+  
+      promises.forEach((promise, index) => {
+        Promise.resolve(promise) // Ensures that each element is treated as a promise
+          .then((value) => {
+            results[index] = value;
+            completedPromises += 1;
+  
+            if (completedPromises === promises.length) {
+              resolve(results);
+            }
+          })
+          .catch(reject); // If any promise is rejected, reject the whole promise
+      });
+  
+      if (promises.length === 0) {
+        resolve(results); // Immediately resolve if the input is an empty array
+      }
+    });
+  }
+  
+  // Example usage
+  const promise1 = Promise.resolve(3);
+  const promise2 = 42;
+  const promise3 = new Promise((resolve, reject) => {
+    setTimeout(resolve, 100, 'foo');
+  });
+  
+  promiseAll([promise1, promise2, promise3]).then((values) => {
+    console.log(values); // [3, 42, "foo"]
+  });  
