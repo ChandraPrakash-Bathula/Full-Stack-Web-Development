@@ -285,3 +285,11 @@ const P10 = new Promise(function (resolve, reject) {
   promiseAll([promise1, promise2, promise3]).then((values) => {
     console.log(values); // [3, 42, "foo"]
   });  
+
+  /* Serialize and Deserialize a Binary Tree : */
+
+  function TreeNode(val, left = null, right = null) {
+    this.val = val;
+    this.left = left;
+    this.right = right;
+  }  
