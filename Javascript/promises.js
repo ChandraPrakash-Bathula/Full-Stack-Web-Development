@@ -344,3 +344,12 @@ const P10 = new Promise(function (resolve, reject) {
   // Example usage
   console.log(firstNonRepeatingCharacter('javascript')); // 'j'
   console.log(firstNonRepeatingCharacter('aabbcc')); // -1  
+
+  /* Async Await() : */
+
+  async function getData(){
+    return "Bro What's up?"
+  }
+
+  const data = getData();
+  console.log(data);
