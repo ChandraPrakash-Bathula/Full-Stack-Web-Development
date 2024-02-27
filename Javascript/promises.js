@@ -252,13 +252,13 @@ const P = new Promise((resolve, reject) => {
 });
 
 const p = new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve("Promise Resolved Value");
-    }, 10000);
-  });
+  setTimeout(() => {
+    resolve("Promise Resolved Value");
+  }, 10000);
+});
 
 async function gettingData() {
-    console.log('Hello World');
+  console.log("Hello World");
   const val = await P;
   console.log("Namaste JavaScript");
   console.log(val);
@@ -291,23 +291,28 @@ gettingData();
 // });
 // console.log(dataPromise);
 
-const API_URL = 'https://api.github.com/users/ChandraPrakash-Bathula'
+const API_URL = "https://api.github.com/users/ChandraPrakash-Bathula";
 
-async function handlingPromise(){
-    const dataa = await fetch(API_URL)
-    const jsonValue = await dataa.json();
-    // fetch().then(res=>res.json()).then(res => console.log(res))
+// async function handlingPromise() {
+//   const dataa = await fetch(API_URL);
+//   const jsonValue = await dataa.json();
+//   // fetch().then(res=>res.json()).then(res => console.log(res))
+//   console.log(jsonValue);
+// }
+// handlingPromise();
+
+async function handlePromise() {
+  try {
+    const detaa = await fetch(API_URL);
+    const jsonValue = await detaa.json();
     console.log(jsonValue);
+  } catch (err) {
+    console.log(err);
+  }
 }
-handlingPromise();
-
-async function handlePromise(){
-    try{
-        const detaa = await fetch(API_URL)
-        const jsonValue = await detaa.json();
-        console.log(jsonValue);
-    }
-    catch(err){
-        console.log(err)
-    }
+async function handlePromise() {
+  const detaa = await fetch(API_URL);
+  const jsonValue = await detaa.json();
+  console.log(jsonValue);
 }
+handlePromise().catch((err) => console.log(err));
