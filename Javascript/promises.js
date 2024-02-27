@@ -72,176 +72,202 @@ const P3 = new Promise(function (resolve, reject) {
   }, 1000);
 });
 
-Promise.all([P1, P2, P3]).then((res) => {
-  return console.log(res);
-}).catch(err=>{
+Promise.all([P1, P2, P3])
+  .then((res) => {
+    return console.log(res);
+  })
+  .catch((err) => {
     console.error(err);
-});
+  });
 /* Promise.alllsettled()*/
 const P4 = new Promise(function (resolve, reject) {
-    setTimeout(function () {
-      resolve("P4 Success");
-    }, 3000);
-  });
-  
-  const P5 = new Promise(function (resolve, reject) {
-    setTimeout(function () {
-      reject("P5 Success");
-    }, 1000);
-  });
-  
-  const P6 = new Promise(function (resolve, reject) {
-    setTimeout(function () {
-      resolve("P6 Fail");
-    }, 1000);
-  });
-  
-  Promise.allSettled([P4, P5, P6]).then((res) => {
+  setTimeout(function () {
+    resolve("P4 Success");
+  }, 3000);
+});
+
+const P5 = new Promise(function (resolve, reject) {
+  setTimeout(function () {
+    reject("P5 Success");
+  }, 1000);
+});
+
+const P6 = new Promise(function (resolve, reject) {
+  setTimeout(function () {
+    resolve("P6 Fail");
+  }, 1000);
+});
+
+Promise.allSettled([P4, P5, P6])
+  .then((res) => {
     return console.log(res);
-  }).catch(err=>{
-      console.error(err);
+  })
+  .catch((err) => {
+    console.error(err);
   });
 
-  /* Promise.race()*/
+/* Promise.race()*/
 const P7 = new Promise(function (resolve, reject) {
-    setTimeout(function () {
-      reject("P7 Fail");
-    }, 4000);
-  });
-  
-  const P8 = new Promise(function (resolve, reject) {
-    setTimeout(function () {
-      resolve("P8 Success");
-    }, 3000);
-  });
-  
-  const P9 = new Promise(function (resolve, reject) {
-    setTimeout(function () {
-      resolve("P9 Success");
-    }, 1000);
-  });
-  
-  Promise.race([P7, P8, P9]).then((res) => {
+  setTimeout(function () {
+    reject("P7 Fail");
+  }, 4000);
+});
+
+const P8 = new Promise(function (resolve, reject) {
+  setTimeout(function () {
+    resolve("P8 Success");
+  }, 3000);
+});
+
+const P9 = new Promise(function (resolve, reject) {
+  setTimeout(function () {
+    resolve("P9 Success");
+  }, 1000);
+});
+
+Promise.race([P7, P8, P9])
+  .then((res) => {
     return console.log(res);
-  }).catch(err=>{
-      console.error(err);
+  })
+  .catch((err) => {
+    console.error(err);
   });
 
-  /* Promise.any()*/
+/* Promise.any()*/
 const P10 = new Promise(function (resolve, reject) {
-    setTimeout(function () {
-      reject("P10 Fail");
-    }, 4000);
-  });
-  
-  const P11 = new Promise(function (resolve, reject) {
-    setTimeout(function () {
-      reject("P11 Fail");
-    }, 3000);
-  });
-  
-  const P12 = new Promise(function (resolve, reject) {
-    setTimeout(function () {
-      reject("P12 Fail");
-    }, 1000);
-  });
-  
-  Promise.any([P10, P11, P12]).then((res) => {
+  setTimeout(function () {
+    reject("P10 Fail");
+  }, 4000);
+});
+
+const P11 = new Promise(function (resolve, reject) {
+  setTimeout(function () {
+    reject("P11 Fail");
+  }, 3000);
+});
+
+const P12 = new Promise(function (resolve, reject) {
+  setTimeout(function () {
+    reject("P12 Fail");
+  }, 1000);
+});
+
+Promise.any([P10, P11, P12])
+  .then((res) => {
     return console.log(res);
-  }).catch(err=>{
-      console.error(err);
-      console.log(err.errors)
+  })
+  .catch((err) => {
+    console.error(err);
+    console.log(err.errors);
   });
 
+/* Interview Questions Delete Later : */
 
-  /* Interview Questions Delete Later : */
+/* Debounce */
 
- /* Debounce */
+function debounce(func, wait) {
+  let timeout;
 
-  function debounce(func, wait) {
-    let timeout;
-  
-    return function executedFunction(...args) {
-      const later = () => {
-        clearTimeout(timeout);
-        func(...args);
-      };
-  
+  return function executedFunction(...args) {
+    const later = () => {
       clearTimeout(timeout);
-      timeout = setTimeout(later, wait);
+      func(...args);
     };
+
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+// Example usage
+const debouncedFunction = debounce(() => console.log("Hello"), 1000);
+debouncedFunction();
+debouncedFunction();
+debouncedFunction(); // Only this call leads to a console.log after 1 second
+
+/* Deep Cloning Object : */
+
+function deepClone(obj) {
+  if (obj === null || typeof obj !== "object") {
+    return obj;
   }
-  
-  // Example usage
-  const debouncedFunction = debounce(() => console.log('Hello'), 1000);
-  debouncedFunction();
-  debouncedFunction();
-  debouncedFunction(); // Only this call leads to a console.log after 1 second
 
-
-  /* Deep Cloning Object : */
-
-  function deepClone(obj) {
-    if (obj === null || typeof obj !== "object") {
-      return obj;
-    }
-  
-    if (Array.isArray(obj)) {
-      let arrCopy = [];
-      obj.forEach((val, index) => {
-        arrCopy[index] = deepClone(val);
-      });
-      return arrCopy;
-    }
-  
-    if (typeof obj === "object") {
-      let objCopy = {};
-      for (let key in obj) {
-        if (obj.hasOwnProperty(key)) {
-          objCopy[key] = deepClone(obj[key]);
-        }
-      }
-      return objCopy;
-    }
+  if (Array.isArray(obj)) {
+    let arrCopy = [];
+    obj.forEach((val, index) => {
+      arrCopy[index] = deepClone(val);
+    });
+    return arrCopy;
   }
-  
-  // Example usage
-  const original = { a: 1, b: { c: 2 }, d: [3, 4] };
-  const cloned = deepClone(original);
-  console.log(cloned); // { a: 1, b: { c: 2 }, d: [3, 4] }
-  console.log(original === cloned); // false
-  console.log(original.b === cloned.b); // false
-  console.log(original.d === cloned.d); // false
-  
-  /* Finding the First Non-repeating Character of a string : */
 
-  function firstNonRepeatingCharacter(str) {
-    const charCount = {};
-  
-    // Count the occurrences of each character
-    for (let char of str) {
-      charCount[char] = (charCount[char] || 0) + 1;
-    }
-  
-    // Find the first character that appears only once
-    for (let char of str) {
-      if (charCount[char] === 1) {
-        return char;
+  if (typeof obj === "object") {
+    let objCopy = {};
+    for (let key in obj) {
+      if (obj.hasOwnProperty(key)) {
+        objCopy[key] = deepClone(obj[key]);
       }
     }
-  
-    return -1; // No non-repeating character found
+    return objCopy;
   }
-  
-  // Example usage
-  console.log(firstNonRepeatingCharacter('javascript')); // 'j'
-  console.log(firstNonRepeatingCharacter('aabbcc')); // -1  
+}
 
-  /* Async Await() : */
+// Example usage
+const original = { a: 1, b: { c: 2 }, d: [3, 4] };
+const cloned = deepClone(original);
+console.log(cloned); // { a: 1, b: { c: 2 }, d: [3, 4] }
+console.log(original === cloned); // false
+console.log(original.b === cloned.b); // false
+console.log(original.d === cloned.d); // false
 
-  async function getData(){
-    return "Bro What's up?"
+/* Finding the First Non-repeating Character of a string : */
+
+function firstNonRepeatingCharacter(str) {
+  const charCount = {};
+
+  // Count the occurrences of each character
+  for (let char of str) {
+    charCount[char] = (charCount[char] || 0) + 1;
   }
 
-  const data = getData();
-  console.log(data);
+  // Find the first character that appears only once
+  for (let char of str) {
+    if (charCount[char] === 1) {
+      return char;
+    }
+  }
+
+  return -1; // No non-repeating character found
+}
+
+// Example usage
+console.log(firstNonRepeatingCharacter("javascript")); // 'j'
+console.log(firstNonRepeatingCharacter("aabbcc")); // -1
+
+/* Async Await() : */
+
+const P = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("Promise Resolved Value");
+  }, 10000);
+});
+
+async function gettingData() {
+  const val = await P;
+  console.log(val);
+}
+gettingData();
+
+// function getData() {
+//   P.then((res) => console.log(res));
+// }
+// getData();
+
+// async function getData() {
+//   return P;
+// }
+
+// const dataPromise = getData();
+// dataPromise.then((res) => {
+//   console.log(res);
+// });
+// console.log(dataPromise);
