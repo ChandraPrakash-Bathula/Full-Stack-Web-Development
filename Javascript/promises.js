@@ -248,14 +248,33 @@ console.log(firstNonRepeatingCharacter("aabbcc")); // -1
 const P = new Promise((resolve, reject) => {
   setTimeout(() => {
     resolve("Promise Resolved Value");
-  }, 10000);
+  }, 5000);
 });
 
+const p = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("Promise Resolved Value");
+    }, 10000);
+  });
+
 async function gettingData() {
+    console.log('Hello World');
   const val = await P;
+  console.log("Namaste JavaScript");
   console.log(val);
+
+  const val2 = await p;
+  console.log("Namaste React");
+  console.log(val2);
 }
 gettingData();
+
+// function someData() {
+//   P.then((res) => console.log(res));
+//   console.log("Namaste JavaScript");
+// }
+
+// someData();
 
 // function getData() {
 //   P.then((res) => console.log(res));
@@ -271,3 +290,24 @@ gettingData();
 //   console.log(res);
 // });
 // console.log(dataPromise);
+
+const API_URL = 'https://api.github.com/users/ChandraPrakash-Bathula'
+
+async function handlingPromise(){
+    const dataa = await fetch(API_URL)
+    const jsonValue = await dataa.json();
+    // fetch().then(res=>res.json()).then(res => console.log(res))
+    console.log(jsonValue);
+}
+handlingPromise();
+
+async function handlePromise(){
+    try{
+        const detaa = await fetch(API_URL)
+        const jsonValue = await detaa.json();
+        console.log(jsonValue);
+    }
+    catch(err){
+        console.log(err)
+    }
+}
