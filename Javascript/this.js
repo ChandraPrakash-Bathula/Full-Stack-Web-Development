@@ -71,3 +71,26 @@ arrowFunction2.by();
 /* 'this' keyword inside a DOM element : Here 'this' is a reference to the HTML elements.
 Like if it is called in a button, then it will refer to that button. It will act completely different in class, constructor and other. */
 
+let someFunction = function fullName(homeTown, state) {
+  console.log(this.fName + " " + this.lName + " from " + homeTown +  "," + state + '.');
+};
+
+const Obj1 = {
+  fName: "Chandu",
+  lName: "Bathula",
+};
+someFunction.call(Obj1, "Sathupally","Telangana");
+
+const Obj2 = {
+  fName: "Navya",
+  lName: "Dudipalla",
+};
+someFunction.call(Obj2, "Sathupally","Telangana");
+
+/* The only difference between call and apply is the way we pass the arguements. In the call case we just pass the arguments by seperating with comma after the initial parameter. */
+
+someFunction.apply(Obj1, ["Kistaram",'Telangana'])
+
+let printMyName = someFunction.bind(Obj2, "Sathupally","Telangana");
+console.log(printMyName);
+printMyName();
