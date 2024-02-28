@@ -8,7 +8,7 @@ So whatever the global object is in that particular run time environment, 'this'
 console.log(this);
 // In the case of browsers we have window object here for the 'this' keyword. But when it comes to the Node JS it is global.
 
-/* This keyword in Function Space : 'this' keyword acts different in strict mode and in non-strict mode.
+/* 'this' keyword in Function Space : 'this' keyword acts different in strict mode and in non-strict mode.
  */
 
 function x() {
@@ -23,7 +23,7 @@ If the value of the 'this' keyword is null or undefined.
 Then 'this' will be replaced with the global object only in non-strict mode. */
 /* Value of 'this' keyword depends on how this function will be called (window) */
 
-/* This inside a object's mode  : In this case the value of the 'this' keyword is the object where 'this' method is present */
+/* 'this' keyword inside a object's mode  : In this case the value of the 'this' keyword is the object where 'this' method is present */
 
 const student = {
   name: "Hanuman",
@@ -35,10 +35,35 @@ const student = {
 student.printName();
 
 /* Call Apply and Bind Methods in this : 
-This should be used when we have to share methods. */
+'this' keyword should be used when we have to share methods. */
 
 const student2 = { name: "Ram" };
 student.printName.call(student2); //here the value of this is student2
 
-/* This inside an arrow function. */
+/* 'this' keyword inside an arrow function : 
+Arrow function does not have their own 'this'. They take the value of their lexical environment where they are enclosed. */
 
+const arrowFunction = {
+  a: "something",
+  arrow: () => {
+    console.log(this);
+  },
+};
+arrowFunction.arrow();
+
+/* 'this' keyword in a nested arrow function : */
+
+const arrowFunction2 = {
+  a: "10",
+  arrow2: function () {
+    const y = () => {
+      console.log(this);
+    };
+    y();
+  },
+  by: () => {
+    console.log(this);
+  },
+};
+arrowFunction2.arrow2();
+arrowFunction2.by();
