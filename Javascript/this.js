@@ -67,3 +67,7 @@ const arrowFunction2 = {
 };
 arrowFunction2.arrow2();
 arrowFunction2.by();
+
+/* 'this' keyword inside a DOM element : Here 'this' is a reference to the HTML elements.
+Like if it is called in a button, then it will refer to that button. It will act completely different in class, constructor and other. */
+
