@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React JS</title>
+  </head>
+
+  <body>
+    <div id="root">
+      <!-- <h1>Hello React !</h1> -->
+    </div>
+
+    <div id="someDiv"></div>
+  </body>
+  <script>
+    
+    const heading = document.createElement("h1");
+    heading.innerHTML = "Namaste React from Chandu !";
+    const root = document.getElementById("root");
+    root.appendChild(heading);
+
+    let header = document.createElement("h3");
+    header.innerHTML = "Hello Everyone.!";
+    let headerr = document.getElementById("someDiv");
+    headerr.appendChild(header);
+
+    let heading2 = document.createElement("h2");
+    heading2.innerHTML = "Namaste to Everyone.!";
+    let someheading = document.getElementById("someDiv");
+    someheading.appendChild(heading2);
+
+  </script>
+</html>
+
+<!-- Read about Emmet :  That is used by VScode to automatically -->
