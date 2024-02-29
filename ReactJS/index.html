@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>React JS</title>
-  </head>
 
-  <body>
-    <div id="root">
-      <!-- <h1>Hello React !</h1> -->
-    </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>React JS</title>
+</head>
 
-    <div id="someDiv"></div>
-  </body>
-  <script>
+<body>
+  <div id="root"></div>
+  <div id="someDiv"></div>
+</body>
+
+<!-- <script>
     
     const heading = document.createElement("h1");
     heading.innerHTML = "Namaste React from Chandu !";
@@ -30,7 +29,19 @@
     let someheading = document.getElementById("someDiv");
     someheading.appendChild(heading2);
 
-  </script>
+  </script> -->
+
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+<script>
+
+  const heading = React.createElement('h1', {}, 'Hello React');
+  const root = ReactDOM.createRoot(document.getElementById('root'));
+  root.render(heading);
+  
+</script>
+
 </html>
 
-<!-- Read about Emmet :  That is used by VScode to automatically -->
+<!-- Read about Emmet, CDN, crossorigin :  That is used by VScode to automatically. And CDN is a content delivery network and it will connect to the nearest server through the help of internet with the script link. -->
