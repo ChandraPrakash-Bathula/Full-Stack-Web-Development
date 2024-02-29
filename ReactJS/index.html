@@ -8,11 +8,19 @@
 </head>
 
 <body>
-  <div id="root"></div>
-  <div id="someDiv"></div>
-</body>
+  <div id="root">
+    <div id="container">
+      <h1>Heading 1</h1>
+      <h2>Heading 2</h2>
+      <h3>Heading 3</h3>
+    </div>
 
-<!-- <script>
+    <h1 id="title">Hello World</h1>
+    Not Rendered Here
+  </div>
+  <div id="someDiv"></div>
+
+  <!-- <script>
     
     const heading = document.createElement("h1");
     heading.innerHTML = "Namaste React from Chandu !";
@@ -31,17 +39,65 @@
 
   </script> -->
 
-<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
-<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
 
-<script>
+  <script>
+    /* const heading = React.createElement(
+    "h1",
+    {
+      id: "title", //All our tag attributes comes from this object.
+    },
+    "Hello React"
+  ); */
 
-  const heading = React.createElement('h1', {}, 'Hello React');
-  const root = ReactDOM.createRoot(document.getElementById('root'));
-  root.render(heading);
-  
-</script>
+    const heading1 = React.createElement(
+      "h1",
+      {
+        id: "title", //All our tag attributes comes from this object.
+      },
+      "Hello React"
+    );
+
+    const heading2 = React.createElement(
+      "h2",
+      {
+        id: "title", //All our tag attributes comes from this object.
+      },
+      "Hello React"
+    );
+
+    const heading3 = React.createElement(
+      "h3",
+      {
+        id: "title", //All our tag attributes comes from this object.
+      },
+      "Hello React"
+    );
+
+    const container = React.createElement("div", { id: "container" }, [
+      heading1,
+      heading2,
+      heading3,
+    ]);
+
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    // console.log(heading);
+    //passing a react element inside the root.
+    root.render(container); //here it takes the element and modifies the DOM, injects into the DOM.
+
+    const subHeading = React.createElement(
+      "h2",
+      { className: "subTitle" },
+      "Hello React JS to Everyone in the world."
+    );
+    const subtitle = ReactDOM.createRoot(document.getElementById("someDiv"));
+    subtitle.render(subHeading);
+  </script>
+</body>
 
 </html>
 
-<!-- Read about Emmet, CDN, crossorigin :  That is used by VScode to automatically. And CDN is a content delivery network and it will connect to the nearest server through the help of internet with the script link. -->
+<!-- Read about async vs defer Emmet, CDN, crossorigin,DOM :  That is used by VScode to automatically. And CDN is a content delivery network and it will connect to the nearest server through the help of internet with the script link. -->
+
+<!-- React Element is nothing but an object. React root overrides other elements that were already present in the root and only renders the code that we have given in the ReactDOM.-->
