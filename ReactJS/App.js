@@ -48,3 +48,15 @@
   );
   const subtitle = ReactDOM.createRoot(document.getElementById("someDiv"));
   subtitle.render(subHeading);
+
+  const obje = {
+    firstName :'Akshay Kumar',
+    printingName : () => {
+        console.log(this.firstName);
+    },
+    printName : function () {
+        console.log(this.firstName)
+    }
+  }
+  obje.printName();
+  obje.printingName();
