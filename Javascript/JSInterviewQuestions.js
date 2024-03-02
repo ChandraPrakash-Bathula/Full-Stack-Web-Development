@@ -581,3 +581,19 @@ function reverseString(str) {
 const originalString = 'hello';
 const reversedString = reverseString(originalString);
 console.log(reversedString); // Output: 'olleh'
+
+//Largest Number in an Array
+
+function findLargestNumber(arr) {
+  let largest = arr[0];
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > largest) {
+      largest = arr[i];
+    }
+  }
+  return largest;
+}
+
+const numberrs = [3, 8, 2, 10, 5];
+const largestNumber = findLargestNumber(numberrs);
+console.log(largestNumber); // Output: 10
