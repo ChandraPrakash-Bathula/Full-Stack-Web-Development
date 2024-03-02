@@ -597,3 +597,16 @@ function findLargestNumber(arr) {
 const numberrs = [3, 8, 2, 10, 5];
 const largestNumber = findLargestNumber(numberrs);
 console.log(largestNumber); // Output: 10
+
+//Checking if a string is a palindrome 
+
+function isPalindrome(str) {
+  const cleanStr = str.toLowerCase().replace(/[^a-zA-Z0-9]/g, '');
+  const reversed = cleanStr.split('').reverse().join('');
+  return cleanStr === reversed;
+}
+
+const testString1 = 'racecar';
+const testString2 = 'hello';
+console.log(isPalindrome(testString1)); // Output: true
+console.log(isPalindrome(testString2)); // Output: false
