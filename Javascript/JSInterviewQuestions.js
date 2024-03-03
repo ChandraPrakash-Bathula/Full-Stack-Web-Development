@@ -610,3 +610,22 @@ const testString1 = 'racecar';
 const testString2 = 'hello';
 console.log(isPalindrome(testString1)); // Output: true
 console.log(isPalindrome(testString2)); // Output: false
+
+/* CRUD Operations in JS : */
+
+let books = [
+  { id: 1, title: 'The Great Gatsby', author: 'F. Scott Fitzgerald', year: 1925 },
+  { id: 2, title: 'To Kill a Mockingbird', author: 'Harper Lee', year: 1960 },
+  { id: 3, title: '1984', author: 'George Orwell', year: 1949 }
+];
+
+/* Create : */
+
+function createBook(book) {
+  const lastBook = books[books.length - 1];
+  const newId = lastBook ? lastBook.id + 1 : 1;
+  book.id = newId;
+  books.push(book);
+}
+
+createBook({ title: 'Brave New World', author: 'Aldous Huxley', year: 1932 });
