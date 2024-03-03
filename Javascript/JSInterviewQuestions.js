@@ -629,3 +629,18 @@ function createBook(book) {
 }
 
 createBook({ title: 'Brave New World', author: 'Aldous Huxley', year: 1932 });
+
+/* Read : */
+
+// Get all books
+function getAllBooks() {
+  return books;
+}
+
+// Get a single book by ID
+function getBookById(id) {
+  return books.find(book => book.id === id);
+}
+
+console.log(getAllBooks());
+console.log(getBookById(2));
