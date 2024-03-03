@@ -644,3 +644,21 @@ function getBookById(id) {
 
 console.log(getAllBooks());
 console.log(getBookById(2));
+
+/* Update : */
+
+function updateBook(id, updatedBookInfo) {
+  books = books.map(book =>
+    book.id === id ? { ...book, ...updatedBookInfo } : book
+  );
+}
+
+updateBook(3, { title: 'Nineteen Eighty-Four', author: 'George Orwell', year: 1949 });
+
+/* Delete : */
+
+function deleteBook(id) {
+  books = books.filter(book => book.id !== id);
+}
+
+deleteBook(1);
