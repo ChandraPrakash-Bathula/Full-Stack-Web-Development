@@ -683,3 +683,13 @@ function findAllDuplicates(nums) {
 }
 
 console.log(findAllDuplicates([4,3,2,7,8,2,3,1])); // [2,3]
+
+/* Flatteing a function : */
+
+function flatten(arr) {
+  return arr.reduce((flat, toFlatten) => {
+    return flat.concat(Array.isArray(toFlatten) ? flatten(toFlatten) : toFlatten);
+  }, []);
+}
+
+console.log(flatten([1, [2, 3, [4]], 5, [6]])); // [1,2,3,4,5,6]
