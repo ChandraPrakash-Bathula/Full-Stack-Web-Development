@@ -662,3 +662,24 @@ function deleteBook(id) {
 }
 
 deleteBook(1);
+
+/* Finding the duplicates : */
+
+function findAllDuplicates(nums) {
+  const duplicates = [];
+  for (let i = 0; i < nums.length; i++) {
+    const index = Math.abs(nums[i]) - 1;
+    if (nums[index] < 0) {
+      duplicates.push(Math.abs(nums[i]));
+    } else {
+      nums[index] = -nums[index];
+    }
+  }
+  // Restore numbers
+  for (let i = 0; i < nums.length; i++) {
+    nums[i] = Math.abs(nums[i]);
+  }
+  return duplicates;
+}
+
+console.log(findAllDuplicates([4,3,2,7,8,2,3,1])); // [2,3]
