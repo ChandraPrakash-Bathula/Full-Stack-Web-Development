@@ -709,3 +709,14 @@ function customFilter(array, callback) {
 const numbes = [1, 2, 3, 4, 5];
 const evenNumbes = customFilter(numbes, numb => numb % 2 === 0);
 console.log(evenNumbes); // [2, 4]
+
+/* Interview Questions : */
+
+function outerFunction(outerVariable) {
+  return function innerFunction(innerVariable) {
+      console.log('Outer Variable: ' + outerVariable);
+      console.log('Inner Variable: ' + innerVariable);
+  }
+}
+const newFunction = outerFunction('outside');
+newFunction('inside'); // Outer Variable: outside, Inner Variable: inside
