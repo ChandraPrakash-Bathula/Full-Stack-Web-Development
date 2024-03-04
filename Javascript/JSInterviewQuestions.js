@@ -693,3 +693,19 @@ function flatten(arr) {
 }
 
 console.log(flatten([1, [2, 3, [4]], 5, [6]])); // [1,2,3,4,5,6]
+
+/* Implementing a array.prototype.filter : */
+
+function customFilter(array, callback) {
+  const filteredArray = [];
+  for (let i = 0; i < array.length; i++) {
+    if (callback(array[i], i, array)) {
+      filteredArray.push(array[i]);
+    }
+  }
+  return filteredArray;
+}
+
+const numbes = [1, 2, 3, 4, 5];
+const evenNumbes = customFilter(numbes, numb => numb % 2 === 0);
+console.log(evenNumbes); // [2, 4]
