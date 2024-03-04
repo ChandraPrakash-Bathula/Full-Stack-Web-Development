@@ -744,3 +744,13 @@ Dog.prototype.speak = function () {
 
 var dog = new Dog('Rex');
 dog.speak(); // Rex barks.
+
+/* Promises : */
+let promise = new Promise(function(resolve, reject) {
+  setTimeout(() => resolve("done"), 1000);
+});
+
+promise.then(
+  result => console.log(result), // "done" after 1 second
+  error => console.log(error) // doesn't run
+);
