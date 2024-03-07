@@ -771,3 +771,13 @@ function reverseArray(arr) {
 }
 
 console.log(reverseArray([1, 2, 3, 4, 5])); // Output: [5, 4, 3, 2, 1]
+
+/* Checking for any anargams : */
+
+function isAnagram(str1, str2) {
+  const normalize = str => str.toLowerCase().replace(/[\W_]+/g, "").split("").sort().join("");
+  return normalize(str1) === normalize(str2);
+}
+
+console.log(isAnagram("listen", "silent")); // Output: true
+console.log(isAnagram("hello", "world")); // Output: false
