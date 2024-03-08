@@ -792,3 +792,15 @@ function findMissingNumber(nums) {
 
 console.log(findMissingNumber([3, 0, 1])); // Output: 2
 console.log(findMissingNumber([9,6,4,2,3,5,7,0,1])); // Output: 8
+
+/* Validating a Binary Tree : */
+
+function isValidBST(root, min = null, max = null) {
+  if (root === null) return true;
+  if (min !== null && root.val <= min) return false;
+  if (max !== null && root.val >= max) return false;
+  return isValidBST(root.left, min, root.val) && isValidBST(root.right, root.val, max);
+}
+
+// Use an appropriate method to create a binary tree based on your setup
+// This function assumes you have a way to create a binary tree node structure.
