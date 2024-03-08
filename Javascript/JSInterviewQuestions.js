@@ -781,3 +781,14 @@ function isAnagram(str1, str2) {
 
 console.log(isAnagram("listen", "silent")); // Output: true
 console.log(isAnagram("hello", "world")); // Output: false
+
+/* Finding Missing Numbers : */
+
+function findMissingNumber(nums) {
+  let expectedSum = nums.length * (nums.length + 1) / 2;
+  let actualSum = nums.reduce((acc, curr) => acc + curr, 0);
+  return expectedSum - actualSum;
+}
+
+console.log(findMissingNumber([3, 0, 1])); // Output: 2
+console.log(findMissingNumber([9,6,4,2,3,5,7,0,1])); // Output: 8
