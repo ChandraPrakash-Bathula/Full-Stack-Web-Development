@@ -1,4 +1,4 @@
-# Full Stack Web Development Mastery Repository : 
+# Full Stack Web Development Mastery Repository
 
 ## ( MERN & MEVN Stack: MongoDB, Express, React.JS, Vue.JS, Node.JS Concepts with projects included. )
 
