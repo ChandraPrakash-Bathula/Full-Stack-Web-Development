@@ -804,3 +804,31 @@ function isValidBST(root, min = null, max = null) {
 
 // Use an appropriate method to create a binary tree based on your setup
 // This function assumes you have a way to create a binary tree node structure.
+
+/* Merged two sorted lists: */
+
+class ListNode {
+  constructor(value = 0, next = null) {
+      this.value = value;
+      this.next = next;
+  }
+}
+
+function mergeTwoLists(l1, l2) {
+  let dummy = new ListNode();
+  let tail = dummy;
+
+  while (l1 !== null && l2 !== null) {
+      if (l1.value < l2.value) {
+          tail.next = l1;
+          l1 = l1.next;
+      } else {
+          tail.next = l2;
+          l2 = l2.next;
+      }
+      tail = tail.next;
+  }
+
+  tail.next = l1 === null ? l2 : l1;
+  return dummy.next;
+}
