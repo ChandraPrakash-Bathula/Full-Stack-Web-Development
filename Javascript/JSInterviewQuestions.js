@@ -873,3 +873,19 @@ function longestConsecutive(nums) {
 }
 
 console.log(longestConsecutive([100, 4, 200, 1, 3, 2])); // Output: 4
+
+/* Duplicates in an array : */
+function findDuplicates(nums) {
+  let duplicates = [];
+  for (let i = 0; i < nums.length; i++) {
+      let index = Math.abs(nums[i]) - 1;
+      if (nums[index] < 0) {
+          duplicates.push(Math.abs(nums[i]));
+      } else {
+          nums[index] = -nums[index];
+      }
+  }
+  return duplicates;
+}
+
+console.log(findDuplicates([4,3,2,7,8,2,3,1])); // Output: [2,3]
