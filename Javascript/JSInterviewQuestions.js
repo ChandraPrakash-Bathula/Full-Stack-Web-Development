@@ -849,3 +849,27 @@ function maxSubArray(nums) {
 }
 
 console.log(maxSubArray([-2,1,-3,4,-1,2,1,-5,4])); // Output: 6
+
+/* Longest Consecutive Sequence : */
+function longestConsecutive(nums) {
+  if (!nums.length) return 0;
+
+  nums.sort((a, b) => a - b);
+  let longestStreak = 1;
+  let currentStreak = 1;
+
+  for (let i = 1; i < nums.length; i++) {
+      if (nums[i] != nums[i - 1]) {
+          if (nums[i] == nums[i - 1] + 1) {
+              currentStreak += 1;
+          } else {
+              longestStreak = Math.max(longestStreak, currentStreak);
+              currentStreak = 1;
+          }
+      }
+  }
+
+  return Math.max(longestStreak, currentStreak);
+}
+
+console.log(longestConsecutive([100, 4, 200, 1, 3, 2])); // Output: 4
