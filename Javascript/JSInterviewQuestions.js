@@ -1036,3 +1036,45 @@ Array.prototype.customFlat = function(depth = 1) {
 // Usage example
 const nestedArray = [1, [2, 3], [[4]], [[[5]]]];
 console.log(nestedArray.customFlat(2)); // [1, 2, 3, 4, [5]]
+
+/* Event Emitters : */
+class EventEmitter {
+  constructor() {
+    this.events = {};
+  }
+
+  on(eventName, listener) {
+    if (!this.events[eventName]) {
+      this.events[eventName] = [];
+    }
+    this.events[eventName].push(listener);
+  }
+
+  emit(eventName, ...args) {
+    const listeners = this.events[eventName];
+    if (listeners) {
+      listeners.forEach(listener => {
+        listener.apply(this, args);
+      });
+    }
+  }
+
+  off(eventName, listenerToRemove) {
+    if (!this.events[eventName]) return;
+    this.events[eventName] = this.events[eventName].filter(listener => listener !== listenerToRemove);
+  }
+}
+
+// Usage example
+const emitter = new EventEmitter();
+const sayHi = (name) => console.log(`Hi ${name}`);
+const sayBye = (name) => console.log(`Bye ${name}`);
+
+emitter.on('greet', sayHi);
+emitter.on('greet', sayBye);
+
+emitter.emit('greet', 'Alice'); // Hi Alice Bye Alice
+
+emitter.off('greet', sayBye);
+
+emitter.emit('greet', 'Bob'); // Hi Bob
