@@ -1014,3 +1014,25 @@ const fib = (n) => (n <= 1 ? n : fib(n - 1) + fib(n - 2));
 const memoizedFib = memoize(fib);
 
 console.log(memoizedFib(40)); // Significantly faster for subsequent calls
+
+/* Array.Prototype. Flat () : */
+
+function flatPolyfill(arr, depth = 1) {
+  let result = [];
+  arr.forEach(item => {
+    if (Array.isArray(item) && depth > 0) {
+      result.push(...flatPolyfill(item, depth - 1));
+    } else {
+      result.push(item);
+    }
+  });
+  return result;
+}
+
+Array.prototype.customFlat = function(depth = 1) {
+  return flatPolyfill(this, depth);
+};
+
+// Usage example
+const nestedArray = [1, [2, 3], [[4]], [[[5]]]];
+console.log(nestedArray.customFlat(2)); // [1, 2, 3, 4, [5]]
