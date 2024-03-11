@@ -902,3 +902,115 @@ function maxSubArray(nums) {
   }
   return maxGlobal;
 }
+
+class TrieNode {
+  constructor() {
+      this.children = {};
+      this.endOfWord = false;
+  }
+}
+
+class Trie {
+  constructor() {
+      this.root = new TrieNode();
+  }
+
+  insert(word) {
+      let current = this.root;
+      for (let char of word) {
+          if (!current.children[char]) {
+              current.children[char] = new TrieNode();
+          }
+          current = current.children[char];
+      }
+      current.endOfWord = true;
+  }
+
+  search(word) {
+      let current = this.root;
+      for (let char of word) {
+          if (!current.children[char]) {
+              return false;
+          }
+          current = current.children[char];
+      }
+      return current.endOfWord;
+  }
+
+  startsWith(prefix) {
+      let current = this.root;
+      for (let char of prefix) {
+          if (!current.children[char]) {
+              return false;
+          }
+          current = current.children[char];
+      }
+      return true;
+  }
+}
+
+/* Advanced version Promises : */
+class SimplePromise {
+  constructor(executor) {
+    this.queue = [];
+    this.errorHandler = () => {};
+    this.finallyHandler = () => {};
+
+    const resolve = (value) => {
+      this.queue.forEach(callback => callback(value));
+      this.finallyHandler();
+    };
+
+    const reject = (error) => {
+      this.errorHandler(error);
+      this.finallyHandler();
+    };
+
+    executor(resolve, reject);
+  }
+
+  then(callback) {
+    this.queue.push(callback);
+    return this;
+  }
+
+  catch(handler) {
+    this.errorHandler = handler;
+    return this;
+  }
+
+  finally(callback) {
+    this.finallyHandler = callback;
+    return this;
+  }
+}
+
+// Usage example
+const fakeAPI = () => new SimplePromise((resolve, reject) => {
+  setTimeout(() => resolve("Success!"), 1000);
+});
+
+fakeAPI()
+  .then(result => console.log(result))
+  .catch(error => console.error(error))
+  .finally(() => console.log("Operation completed."));
+
+/* Memoization Functions : */
+function memoize(fn) {
+  const cache = new Map();
+  return function(...args) {
+    const key = args.toString();
+    if (cache.has(key)) {
+      return cache.get(key);
+    }
+    const result = fn.apply(this, args);
+    cache.set(key, result);
+    return result;
+  };
+}
+
+// Example usage
+const fib = (n) => (n <= 1 ? n : fib(n - 1) + fib(n - 2));
+const memoizedFib = memoize(fib);
+
+console.log(memoizedFib(40)); // Significantly faster for subsequent calls
