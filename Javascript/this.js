@@ -94,3 +94,90 @@ someFunction.apply(Obj1, ["Kistaram",'Telangana'])
 let printMyName = someFunction.bind(Obj2, "Sathupally","Telangana");
 console.log(printMyName);
 printMyName();
+
+"use strict";
+
+// 'this' in Global Space
+// In global execution context, 'this' refers to the global object which varies by environment.
+console.log(this);  // In a browser, it outputs the Window object; in Node.js, it outputs the global object.
+
+// 'this' keyword in Function Space: Behavior changes with strict mode.
+function x() {
+  // 'this' in a function depends on whether it is called in strict mode or not.
+  console.log(this);
+}
+x(); // Logs 'undefined' in strict mode
+window.x(); // Logs 'window' in browser environment
+
+// 'this' keyword in non-strict mode - substitution rule
+// If 'this' is null or undefined, JavaScript in non-strict mode will fall back to the global object.
+function y() {
+  console.log(this);
+}
+y();  // Logs 'window' in a browser in non-strict mode
+
+// 'this' keyword inside an object's method
+const student = {
+  name: "Hanuman",
+  printName: function () {
+    console.log(this.name);  // 'this' refers to the student object
+    console.log(this);
+  },
+};
+student.printName();
+
+// Using 'call', 'apply', and 'bind' to control 'this'
+const student2 = { name: "Ram" };
+student.printName.call(student2);  // Temporarily sets 'this' to student2 for the call
+
+// 'this' keyword inside an arrow function
+const arrowFunction = {
+  a: "something",
+  arrow: () => {
+    console.log(this);  // Arrow functions do not bind their own 'this'; 'this' value is lexically inherited from the outer function
+  },
+};
+arrowFunction.arrow();
+
+// Nested arrow function example
+const arrowFunction2 = {
+  a: "10",
+  arrow2: function () {
+    const y = () => {
+      console.log(this);  // 'this' is bound lexically, refers to arrowFunction2
+    };
+    y();
+  },
+  by: () => {
+    console.log(this);  // No own 'this', uses 'this' from its lexical scope (global or undefined in strict mode)
+  },
+};
+arrowFunction2.arrow2();
+arrowFunction2.by();
+
+// 'this' keyword in DOM element handlers
+// 'this' refers to the element that triggered the event
+document.getElementById("myButton").addEventListener("click", function() {
+  console.log(this);  // 'this' refers to the element with id 'myButton'
+});
+
+// 'this' in call and apply methods
+let someFunction = function (homeTown, state) {
+  console.log(this.fName + " " + this.lName + " from " + homeTown + ", " + state + '.');
+};
+
+const Obj1 = {
+  fName: "Chandu",
+  lName: "Bathula",
+};
+someFunction.call(Obj1, "Sathupally", "Telangana");  // Pass arguments individually
+someFunction.apply(Obj1, ["Kistaram", "Telangana"]);  // Pass arguments as an array
+
+// 'this' with bind method
+const Obj2 = {
+  fName: "Navya",
+  lName: "Dudipalla",
+};
+let printMyName = someFunction.bind(Obj2, "Sathupally", "Telangana");  // Creates a new function permanently bound to Obj2
+console.log(printMyName);  // Shows function details
+printMyName();  // Executes the function
