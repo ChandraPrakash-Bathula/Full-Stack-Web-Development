@@ -1,0 +1,48 @@
+{
+  "id": "24613",
+  "name": "Domino's Pizza",
+  "cloudinaryImageId": "hbeqc0r6ifvqiuychft2",
+  "locality": "Stock Exchange Road",
+  "areaName": "Himayath Nagar",
+  "costForTwo": "₹400 for two",
+  "cuisines": ["Pizzas", "Italian", "Pastas", "Desserts"],
+  "avgRating": 4.5,
+  "parentId": "2456",
+  "avgRatingString": "4.5",
+  "totalRatingsString": "10K+",
+  "sla": {
+    "deliveryTime": 30,
+    "serviceability": "SERVICEABLE",
+    "slaString": "30 mins",
+    "iconType": "ICON_TYPE_EMPTY"
+  },
+  "availability": {
+    "nextCloseTime": "2024-03-17 02:59:00",
+    "opened": true
+  },
+  "badges": {},
+  "isOpen": true,
+  "type": "F",
+  "badgesV2": {
+    "entityBadges": {
+      "imageBased": {},
+      "textBased": {},
+      "textExtendedBadges": {}
+    }
+  },
+  "aggregatedDiscountInfoV3": {
+    "header": "40% OFF",
+    "subHeader": "UPTO ₹80"
+  },
+  "differentiatedUi": {
+    "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+    "differentiatedUiMediaDetails": {
+      "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+      "lottie": {},
+      "video": {}
+    }
+  },
+  "reviewsSummary": {},
+  "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+  "restaurantOfferPresentationInfo": {}
+}

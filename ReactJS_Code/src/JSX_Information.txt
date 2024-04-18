@@ -1,0 +1,132 @@
+Website Layout
+  Header Component
+    -> Logo
+    -> Navbar List Items (Right Side)
+    -> Cart
+  Body Component
+    -> Search Bar
+    -> Restaurant List
+      -> Restaurant Card
+        -> Image
+        -> Name
+        -> Cuisine
+        -> Star Rating
+  Footer Component
+    -> Links
+    -> Copyrights
+
+Optional Chaining ?. If it is just from object then it is {FoodItem.Name} and also renders only name if it exists by checking here by using optional chaining {FoodItem[0].Name?.join(", ")}.
+
+React.Fragment is a component, which is exported by the react.<React.Fragment> is like an empty tag <>.
+It acts as a parent element which is invisible in the DOM. And we can't pass in attributes to the React Fragments. 
+
+
+//One way of writing styles in JSX.
+
+const stylingObj = {
+  backgroundColor: "powderblue",
+};
+//This is another way  :  <h1 style={{ color: "red" }}> Some Heading</h1>
+
+const container = () => {
+  return (
+    <div style={stylingObj}>
+      <h1 style={{ color: "red" }}>Some Heading</h1>
+    </div>
+  );
+};
+
+// import NewHeader from "./components/Header; and this can be added as a JSX tag below and it will work the same as Header Component. We can also import with different names while exported as UnderlyingDefaultSource.
+
+// import HeaderComponent from "./components/Header"; Default Import
+// import { Title } from "./components/Header"; Name import; We can use Header.js or Header while importing and both works same.
+
+//import { Title, HeaderComponent } from "./components/Header"; in the case of export constants for multiple items we can import like this.
+
+/* We can import multiple things by using  import * as Name from "filepath"; then we can use for object properties too like obj.name etc... 
+But while we are importing as * for multiple components we can use like this : 
+Take the header and title component and we can use them individually like the below
+import * as HeadBarComponents from "./components/Header"; 
+
+<HeadBarComponents.Header />
+<HeadBarComponents.Title />
+ */
+
+
+/* useEffect() has a call back function as it is not called directly, instead it will only called once useEffect is called. and it has a dependency array [] in it.
+  in the empty dependency we can have react state variable and this will only calls when they gets changed or called.
+ 
+  syntax : useEffect(() => {any function in here},[any dependency array here]).
+
+  => empty dependency will only called only after initial render but not everytime.
+  => If it has an dependency array then it will render after initial render + whenever the function is called or changed.
+  */
+
+  /* So, it is a good practice to write API call in useEffect. It is also better to have a initial render, later an API call and a final display of the data. */
+ 
+
+  /* conditional rendering : 
+  If restaurant data is empty then render shimmer UI else actual UI. */
+
+  /* This can even be written as const searchInput = useState();
+  const [searchTxt,setSearchTxt] = searchInput */
+
+/* e.target.value is nothing but whatever we type in the input box.
+What is State? What is Hook? What is useState? 
+Hooks are just functions written by the developers at meta and gives us specific functionality. 
+This use state is used to create state variables. This functions returns an array and the first item in the array is the variable name.
+In React we create variables like this const [variable name] = useState();
+Ex : In JS const searchText = "KFC"; in JSX  const [searchText] = useState("Biryani"); */
+
+/* <About />
+<BodyComponent />
+<Contact /> */
+
+// const appRoutes = createBrowserRouter([
+//   {
+//     path: "/",
+//     element: <WebsiteLayout />,
+//     errorElement: <Error />,
+//   },
+//   {
+//     path: "/about",
+//     element: <About />,
+//   },
+// ]);
+
+/*
+Chunking
+On Demand Loading
+Lazy Loading
+Code Splitting
+Dynamic Bundling
+Dynamic Imports
+
+When we are importing the component in demand react upon render tries to suspend the loading.
+*/
+
+/*
+Redux is not mandatory for all projects. It is an optional for medium and small and should be only used when there is a heavy usage of the data and state.
+*/
+
+
+/* In {} in jsx only Allowed only JS Expressions and statements */
+/* In the case of individual imports and export we need to use the keyword 
+export infront of the const variable and also while importing we need to write in {} like import {Title} from "Header"; */
+
+ {/* <Outlet /> */} Takes care of the children elements in the routing.
+
+ /* Older version of redux : Don't Mutate the state and also returning was mandatory.
+const newState = [...state]
+newState.items.push(action.payload)
+return newState
+*/
+
+    /* In the Newer Version of Redux Toolkit : We have to mutate the state, and there is no mandatory of using return.
+    Redux Toolkit also uses immer which is a JS library in it for mutation kinda things. */
+
+There are three types of testing a developer can do in a react application.
+1. Unit Testing. : It is individual unit testing keeping the rest of the application in isolation.
+2. Integration Testing. : This is testing the integration of the components with respect to functionality associated among them.
+3. End to End Testing (e2e). : This is a complete testing of the application and by testing all the flows.
+Test cases are written and stored in this folder  : __test__  and the convention of _ _ name _ _ is known as Dunder.
