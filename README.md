@@ -25,7 +25,7 @@ Your ultimate resource hub for mastering the MERN (MongoDB, Express.js, React.js
 
 ## About :
 
-This repository is more than just a collection of resources—it's a comprehensive guide for those passionate about FullStack Web Development, with a special focus on the MERN stack. Catering to both beginners and seasoned developers, we provide an array of informative content and practical examples to help you build dynamic and resilient web applications.
+This repository is more than just a collection of resources, it's a comprehensive guide for those passionate about FullStack Web Development, with a special focus on the MERN stack. Catering to both beginners and seasoned developers, we provide an array of informative content and practical examples to help you build dynamic and resilient web applications.
 
 # Understanding JavaScript: Execution and Threading
 
