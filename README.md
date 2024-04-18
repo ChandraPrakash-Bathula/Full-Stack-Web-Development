@@ -1,4 +1,4 @@
-# Full Stack Web Development Mastery Repository 🚀 : React
+# Full Stack Web Development Mastery Repository 🚀 : React.js
 
 ## ( MERN Stack: MongoDB, Express, React.JS, Node.JS Concepts with projects included. )
 
