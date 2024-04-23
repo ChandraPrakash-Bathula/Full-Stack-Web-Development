@@ -528,3 +528,16 @@ function displayGrade({ name, grade }) {
 }
 
 console.log(displayGrade(student));
+
+// Destructuring and Renaming:
+const product = {
+    productId: 12345,
+    productName: 'Gadget',
+    price: 299.99
+};
+
+function getProductDetails({ productId: id, productName: name, price }) {
+    return `ID: ${id}, Name: ${name}, Price: $${price}`;
+}
+
+console.log(getProductDetails(product));
