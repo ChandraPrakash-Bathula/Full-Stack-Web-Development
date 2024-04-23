@@ -541,3 +541,14 @@ function getProductDetails({ productId: id, productName: name, price }) {
 }
 
 console.log(getProductDetails(product));
+
+// Destructuring Arrays : 
+
+const rgb = [255, 200, 0];
+
+function convertRGBToCSS([red, green, blue]) {
+    "use strict";
+    return `rgb(${red}, ${green}, ${blue})`;
+}
+
+console.log(convertRGBToCSS(rgb)); // "rgb(255, 200, 0)"
