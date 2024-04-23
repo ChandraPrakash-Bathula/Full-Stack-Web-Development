@@ -501,3 +501,15 @@ function getUserEmail(userInfo) {
 }
 
 console.log(getUserEmail(user));
+
+// Destructuring with default value:
+
+const settings = {
+    theme: 'dark',
+};
+
+function configureSettings({ theme = 'light', fontSize = '14px' }) {
+    return `Theme: ${theme}, Font Size: ${fontSize}`;
+}
+
+console.log(configureSettings(settings));
