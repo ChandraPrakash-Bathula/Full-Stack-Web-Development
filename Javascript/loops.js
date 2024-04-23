@@ -552,3 +552,14 @@ function convertRGBToCSS([red, green, blue]) {
 }
 
 console.log(convertRGBToCSS(rgb)); // "rgb(255, 200, 0)"
+
+// Destructuring with Rest Parameters :
+
+const team = ['Alice', 'Bob', 'Charlie', 'David'];
+
+function teamSetup([leader, assistant, ...members]) {
+    "use strict";
+    return `Leader: ${leader}, Assistant: ${assistant}, Members: ${members.join(', ')}`;
+}
+
+console.log(teamSetup(team));
