@@ -483,3 +483,21 @@ function getPersonInfo(personInfo) {
 }
 
 console.log(getPersonInfo(person));
+
+// Nested De-Structuring :
+
+const user = {
+    id: 101,
+    profile: {
+        username: 'johndoe123',
+        email: 'john@example.com'
+    }
+};
+
+function getUserEmail(userInfo) {
+    "use strict";
+    const { profile: { email } } = userInfo;
+    return email;
+}
+
+console.log(getUserEmail(user));
