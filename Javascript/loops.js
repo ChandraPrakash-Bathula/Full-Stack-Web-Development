@@ -467,3 +467,19 @@ function practicingBro(someNumber) {
     return firstNumber;
 }
 console.log(practicingBro(any_number));
+
+// Example 1: Extracting Multiple Properties
+
+const person = {
+    name: 'John Wick',
+    age: 45,
+    job: 'Software Engineer'
+};
+
+function getPersonInfo(personInfo) {
+    "use strict";
+    const { name, age } = personInfo;
+    return `Name: ${name}, Age: ${age}`;
+}
+
+console.log(getPersonInfo(person));
