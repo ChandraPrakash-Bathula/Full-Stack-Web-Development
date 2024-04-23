@@ -513,3 +513,18 @@ function configureSettings({ theme = 'light', fontSize = '14px' }) {
 }
 
 console.log(configureSettings(settings));
+
+// Destructuring Function Parameters Directly :
+
+const student = {
+    name: 'Alice',
+    score: 92,
+    grade: 'A'
+};
+
+function displayGrade({ name, grade }) {
+    "use strict";
+    return `${name} received a grade of ${grade}`;
+}
+
+console.log(displayGrade(student));
